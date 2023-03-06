@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"type":"text","text":"SYSCALL_DEFINE0(fork)\n{\n\tstruct pt_regs *regs = task_pt_regs(current);\n\treturn do_fork(SIGCHLD, regs->gprs[15], regs, 0, NULL, NULL);\n}","id":"5f912e00fe802b1c","x":-380,"y":-220,"width":500,"height":160}
+	],
+	"edges":[]
+}
