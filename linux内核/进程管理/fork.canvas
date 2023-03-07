@@ -1,9 +1,11 @@
 {
 	"nodes":[
-		{"type":"text","text":"SYSCALL_DEFINE0(fork)\n{\n\tstruct pt_regs *regs = task_pt_regs(current);\n\treturn do_fork(SIGCHLD, regs->gprs[15], regs, 0, NULL, NULL);\n}","id":"5f912e00fe802b1c","x":-840,"y":-420,"width":500,"height":160},
-		{"id":"cad9c44bb0a1ab2a","x":-200,"y":-398,"width":250,"height":116,"type":"text","text":""}
+		{"type":"text","text":"int sys_fork(struct pt_regs *regs)\n{\n\treturn do_fork(SIGCHLD, regs->sp, regs, 0, NULL, NULL);\n}","id":"5f912e00fe802b1c","x":-1720,"y":-1520,"width":500,"height":138},
+		{"type":"text","text":"PTREGSCALL0(fork)","id":"924bba7e8ccfb74a","x":-2080,"y":-1481,"width":250,"height":60},
+		{"type":"text","text":"long do_fork(unsigned long clone_flags, unsigned long stack_start, struct pt_regs *regs, unsigned long stack_size, int __user *parent_tidptr, int __user *child_tidptr)","id":"cad9c44bb0a1ab2a","x":-1080,"y":-1509,"width":1200,"height":438}
 	],
 	"edges":[
-		{"id":"b071deb4e9d3141e","fromNode":"5f912e00fe802b1c","fromSide":"right","toNode":"cad9c44bb0a1ab2a","toSide":"left"}
+		{"id":"b071deb4e9d3141e","fromNode":"5f912e00fe802b1c","fromSide":"right","toNode":"cad9c44bb0a1ab2a","toSide":"left"},
+		{"id":"27404bf723ed3c26","fromNode":"924bba7e8ccfb74a","fromSide":"right","toNode":"5f912e00fe802b1c","toSide":"left"}
 	]
 }
