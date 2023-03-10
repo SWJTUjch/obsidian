@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"type":"text","text":"schedule()","id":"9b6fdd6a54257f2f","x":-740,"y":-50,"width":250,"height":60},
+		{"type":"text","text":"switch_to(){\n\t保存入参\n\t将当前进程入栈\n\t保存栈顶\n\t恢复替换进程栈顶\n\t设置被替换进程恢复执行时的动作\n\t替换进程的eip入栈\n\t执行__switch_to()函数\n\t\n}","id":"7a5d9b470639390c","x":-360,"y":-180,"width":455,"height":320},
+		{"type":"text","text":"__swtich_to(){\n[[内存管理#GDT表]]\n}","id":"451a86aa77736601","x":180,"y":-145,"width":360,"height":250}
+	],
+	"edges":[
+		{"id":"6f77be689702cbd7","fromNode":"7a5d9b470639390c","fromSide":"right","toNode":"451a86aa77736601","toSide":"left"}
+	]
+}
