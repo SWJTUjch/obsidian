@@ -22,5 +22,28 @@
 - pact 契约 ，协议 (used in international relationships)
 - pace 表示反驳
 
+# crim - fault or crime or accusation
+- cruiminology 犯罪学
+- decriminalize 使合法化；非刑事化
+- incriminate 使某人显得有罪，归罪于
+- recrimination 指责，反控
 
+# prob - prove or proof or honesty or integrity
+
+- approbation 认可
+- probate 遗嘱认证
+- probity 正直诚实
+- reprobate 不道德的人
+
+# grav - heavy weight serious
+- grave 重大的，严肃的
+- gravitas 严肃，庄重
+- gravitate 被吸引
+- aggravate 使恶化，激怒
+
+# lev - light
+- alleviate 减轻 缓和
+- elevation 高度 提升
+- cantilever 悬臂
+- levity 轻浮，轻佻
 
