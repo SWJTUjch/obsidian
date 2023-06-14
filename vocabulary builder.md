@@ -1,0 +1,26 @@
+# bene - well
+- benediction (dict - to speak) 祝福
+- benefactor (fac - to make or do) 赞助，捐献
+- beneficiary  受益人
+- benevolence 仁爱，捐助
+
+# am - to love
+- amicable 有爱地，和平的（国家或团体之间）
+- enamored 使倾心，使迷恋
+- amorous 含情脉脉的
+- paramour 情人
+
+# bell - war
+- antebellum (ante - before)  战前岁月的
+- bellicose 好争辩的 (used to describe a nation and their leaders)
+- belligerence 好战 (used to describe from person to global)
+- rebellion 谋反，叛逆
+
+# pac - agree peace
+- pacify 平息
+- pacifist 和平主义者
+- pact 契约 ，协议 (used in international relationships)
+- pace 表示反驳
+
+
+
