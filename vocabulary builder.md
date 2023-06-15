@@ -47,3 +47,56 @@
 - cantilever 悬臂
 - levity 轻浮，轻佻
 
+# mania - madness
+- kleptomania (kelpto - to steal)偷窃癖
+- dipsomaniac 嗜酒狂
+- megalomaniac 自大狂
+- egomaniac 极端自我主义者
+
+# psych - breath life soul
+psyche 灵魂 心智
+psychedelic  致幻剂
+psychosomatic 身心的
+psychotherapist 精神治疗医生
+
+# cept - take seize
+- reception n.接受，接待  
+- intercept (inter - between) v.拦截  
+- perceptible (per - through) a.可察觉的，可感知的  
+- susceptible (sus - up) a.易受影响的  
+
+# fin (Latin: “end” or “boundary”)
+confine v.限制，禁闭  
+definitive a.权威的，确定的  
+finite a.有限的  
+infinitesimal a.无穷小的  
+
+# ject (Latin: jacere, “throw” “hurl”)
+interject v.插话  
+conjecture (con - together) v.推测  
+projection n.推测，投射  (used in business or goveronment)
+trajectory (trans - across) n.轨道，轨迹  
+
+# tract (Latin: trahere “drag or draw”)
+traction n.牵引力  
+retract v.缩进，收回  
+protracted a.拖延的  
+intractable a.棘手的，难治的  
+
+# duc/duct (Latin: ducere, “to lead”) 
+conducive a.有助的，有益的  
+deduction n.减除，扣除，推演  
+induce v.引起，诱导  
+seduction n.引诱，勾引 （尤指性方面）  
+
+# sequ (Latin: sequi, “to follow”)  
+sequential a.连续的  
+subsequent a.随后的  
+consequential a.结果的，重要的  
+non sequitur 不合理的
+
+
+
+
+
+
