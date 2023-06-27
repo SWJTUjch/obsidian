@@ -54,10 +54,10 @@
 - egomaniac 极端自我主义者
 
 # psych - breath life soul
-psyche 灵魂 心智
-psychedelic  致幻剂
-psychosomatic 身心的
-psychotherapist 精神治疗医生
+- psyche 灵魂 心智
+- psychedelic  致幻剂
+- psychosomatic 身心的
+- psychotherapist 精神治疗医生
 
 # cept - take seize
 - reception n.接受，接待  
@@ -66,34 +66,96 @@ psychotherapist 精神治疗医生
 - susceptible (sus - up) a.易受影响的  
 
 # fin (Latin: “end” or “boundary”)
-confine v.限制，禁闭  
-definitive a.权威的，确定的  
-finite a.有限的  
-infinitesimal a.无穷小的  
+- confine v.限制，禁闭  
+- definitive a.权威的，确定的  
+- finite a.有限的  
+- infinitesimal a.无穷小的  
 
 # ject (Latin: jacere, “throw” “hurl”)
-interject v.插话  
-conjecture (con - together) v.推测  
-projection n.推测，投射  (used in business or goveronment)
-trajectory (trans - across) n.轨道，轨迹  
+- interject v.插话  
+- conjecture (con - together) v.推测  
+- projection n.推测，投射  (used in business or goveronment)
+- trajectory (trans - across) n.轨道，轨迹  
 
 # tract (Latin: trahere “drag or draw”)
-traction n.牵引力  
-retract v.缩进，收回  
-protracted a.拖延的  
-intractable a.棘手的，难治的  
+- traction n.牵引力  
+- retract v.缩进，收回  
+- protracted a.拖延的  
+- intractable a.棘手的，难治的  
 
 # duc/duct (Latin: ducere, “to lead”) 
-conducive a.有助的，有益的  
-deduction n.减除，扣除，推演  
-induce v.引起，诱导  
-seduction n.引诱，勾引 （尤指性方面）  
+- conducive a.有助的，有益的  
+- deduction n.减除，扣除，推演  
+- induce v.引起，诱导  
+- seduction n.引诱，勾引 （尤指性方面）  
 
 # sequ (Latin: sequi, “to follow”)  
-sequential a.连续的  
-subsequent a.随后的  
-consequential a.结果的，重要的  
-non sequitur 不合理的
+- sequential a.连续的  
+- subsequent a.随后的  
+- consequential a.结果的，重要的  
+- non sequitur 不合理的
+
+# ambi (Latin: ”on both sides“ or“around“) 
+- ambiguous a.模糊不清的  
+- ambient a.周围的  
+- ambivalent a.矛盾的  
+- ambit n.范围  (an abstract range)
+
+# epi (Greek: “on, over” or “attached to”)
+- epilogue (log - word, speech, reason) n.结语  
+- epiphyte n.附生植物  
+- epitaph (taphos - tomb, funeral) n.碑文，墓志铭（inscription）  
+- epithet n.绰号  
+
+# hyp/hypo (Greek: “below, under”) 
+- hypochondriac n.疑病患者  
+- hypoglycemia (glyk - sweet) n.低血糖症 
+- hypothermia n.低体温症  
+- hypothetical (maybe to a theory) a.假设 
+
+# therm/thermo (Greek: “warm”) 
+- thermal a.热的，保热的  
+- thermodynamics (dynam - power) n. 热力学  
+- thermonuclear a.热核的  
+
+# poly (Greek: polys, “many”)  
+- polyp n.水吸虫，息肉  
+- polyglot (glot - language) n.通晓多种语言的人  
+- polymer n.聚合物  
+- polygraph (graph - to write) n.多种波动描记器，测谎仪等… 
+- polygon n.多边形
+
+**prim (Latin: primus, “first”)**  
+primal a.原始的，最初的  
+primer n.初级读本，入门书  
+primate n.灵长类  
+primordial a.原始的，原生的  
+**hom/homo (Greek: homos, “same”)**  
+homonym n.同音（同形）异义词  
+homogeneous a.同类的，同质的  
+homologous a.同源的  
+homogenize v.使均匀，使类同  
+**dis (Latin: „apart“, also means „opposite“ or „not“)**  
+dissuade v.劝阻  
+disorient v.使…迷惑，使…失去方向  
+discredit v.使人对…产生怀疑  
+dislodge v.驱逐
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
