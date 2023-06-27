@@ -125,21 +125,27 @@
 - polygraph (graph - to write) n.多种波动描记器，测谎仪等… 
 - polygon n.多边形
 
-**prim (Latin: primus, “first”)**  
-primal a.原始的，最初的  
-primer n.初级读本，入门书  
-primate n.灵长类  
-primordial a.原始的，原生的  
-**hom/homo (Greek: homos, “same”)**  
-homonym n.同音（同形）异义词  
-homogeneous a.同类的，同质的  
-homologous a.同源的  
-homogenize v.使均匀，使类同  
-**dis (Latin: „apart“, also means „opposite“ or „not“)**  
-dissuade v.劝阻  
-disorient v.使…迷惑，使…失去方向  
-discredit v.使人对…产生怀疑  
-dislodge v.驱逐
+# prim (Latin: primus, “first”)
+- primary a.主要的，初级的
+- primeval a.原始的
+- primal a.原始的，最初的  
+- primer n.初级读本，入门书  
+- primate n.灵长类  
+- primordial a.原始的，原生的  
+
+# hom/homo (Greek: homos, “same”)
+- homograph  n.同形异义词
+- homosexual n.同性恋
+- homonym n.同音（同形）异义词  
+- homogeneous (gen - birth) a.同类的，同质的  
+- homologous a.同源的  
+- homogenize v.使均匀，使类同  
+
+# dis (Latin: „apart“, also means „opposite“ or „not“)  
+- dissuade ( -- persuade) v.劝阻  
+- disorient v.使…迷惑，使…失去方向  
+- discredit v.使人对…产生怀疑  
+- dislodge v.驱逐
 
 
 
