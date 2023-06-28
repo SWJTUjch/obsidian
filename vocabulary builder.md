@@ -147,7 +147,48 @@
 - discredit v.使人对…产生怀疑  
 - dislodge v.驱逐
 
+# vor (Latin: vorare “to eat”, ivorous - eaters of certain kinds of food)  
+- carnivorous ([[vocabulary builder#carn (Latin “flesh””meat”)]]) a.食肉的  
+- herbivorous (herb - 草药) a.食草的  
+- insectivorous a.食虫的  
+- voracious a.贪婪的  
 
+# carn (Latin: “flesh””meat”)  
+carnage n.大屠杀  
+carnal a.肉体的  
+incarnate a.化身的 v.体现，使…具体化  
+reincarnation n.再生  
+
+**cred (Latin: credere, “to believe” “to entrust”)**  
+credence n.信任  
+credible a.可靠的，可信的  
+credulity n.轻信  
+credo n.信条  
+**fid (Latin: fides, “faith” or “trust”)**  
+affidavit n.宣誓书  
+diffident a.缺乏自信的  
+fiduciary n.信托的  
+perfidy n.不诚实  
+**curr/curs (Latin: currere, “to run”)**  
+concurrent a.同时发生的  
+cursory a.草率的，匆忙的  
+discursive a.离题的  
+precursor n.前兆  
+**ped (Latin: “foot”)**  
+quadruped n.四足动物  
+pedigree n.血统  
+impediment n.阻碍  
+pedestrian n.行人，步行者  
+**flect (flectere, “to bend”)**  
+deflect v.转向，偏斜  
+reflective a.反射的，沉思的  
+genuflect v.跪拜  
+inflection n.音调变化，曲折变化（语言学）  
+**post (Latin: “after”)**  
+posterior n./a. 后部的  
+posthumous a.死后的，死后出版的  
+postmodern a.后现代的  
+postmortem a.死后的，随后的
 
 
 
