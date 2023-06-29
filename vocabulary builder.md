@@ -144,7 +144,7 @@
 # dis (Latin: „apart“, also means „opposite“ or „not“)  
 - dissuade ( -- persuade) v.劝阻  
 - disorient v.使…迷惑，使…失去方向  
-- discredit v.使人对…产生怀疑  
+- discredit ([[vocabulary builder#cred (“to believe” “to entrust”)]])v.使人对…产生怀疑  
 - dislodge v.驱逐
 
 # vor (Latin: vorare “to eat”, ivorous - eaters of certain kinds of food)  
@@ -154,21 +154,25 @@
 - voracious a.贪婪的  
 
 # carn (Latin: “flesh””meat”)  
-carnage n.大屠杀  
-carnal a.肉体的  
-incarnate a.化身的 v.体现，使…具体化  
-reincarnation n.再生  
+- carnation n.康乃馨 adj.肉色的
+- carnival n.嘉年华
+- carnage n.大屠杀  （数量多的死亡，比如意外死亡，massacre和slaughter一般是战争中的屠杀）
+- carnal ( -- spiritual) a.肉欲的  
+- incarnate a.化身的 v.体现，使…具体化  
+- reincarnation n.再生  
 
-**cred (Latin: credere, “to believe” “to entrust”)**  
-credence n.信任  
-credible a.可靠的，可信的  
-credulity n.轻信  
-credo n.信条  
-**fid (Latin: fides, “faith” or “trust”)**  
-affidavit n.宣誓书  
-diffident a.缺乏自信的  
-fiduciary n.信托的  
-perfidy n.不诚实  
+# cred (“to believe” “to entrust”)  
+- credence n.信任  ( belief , credence seldom used in religion or philosophy, but used in reports, rumors, and oponions, it tends to be used with give, lack, lend, or gain.)
+- credible a.可靠的，可信的  
+- credulity n.轻信  
+- credo n.信条  
+# fid (Latin: fides, “faith” or “trust”)
+- confident  adj.自信的; 确信的|
+- diffident a.缺乏自信的  
+- affidavit n.宣誓书  ( often used in court)
+- fiduciary n.信托的  
+- perfidy n.不诚实  
+
 **curr/curs (Latin: currere, “to run”)**  
 concurrent a.同时发生的  
 cursory a.草率的，匆忙的  
