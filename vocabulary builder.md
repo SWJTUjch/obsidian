@@ -65,67 +65,67 @@
 - perceptible (per - through) a.可察觉的，可感知的  
 - susceptible (sus - up) a.易受影响的  
 
-# fin (Latin: “end” or “boundary”)
+# fin (“end” or “boundary”)
 - confine v.限制，禁闭  
 - definitive a.权威的，确定的  
 - finite a.有限的  
 - infinitesimal a.无穷小的  
 
-# ject (Latin: jacere, “throw” “hurl”)
+# ject (“throw” “hurl”)
 - interject v.插话  
 - conjecture (con - together) v.推测  
 - projection n.推测，投射  (used in business or goveronment)
 - trajectory (trans - across) n.轨道，轨迹  
 
-# tract (Latin: trahere “drag or draw”)
+# tract (“drag or draw”)
 - traction n.牵引力  
 - retract v.缩进，收回  
 - protracted a.拖延的  
 - intractable a.棘手的，难治的  
 
-# duc/duct (Latin: ducere, “to lead”) 
+# duc/duct (“to lead”) 
 - conducive a.有助的，有益的  
 - deduction n.减除，扣除，推演  
 - induce v.引起，诱导  
 - seduction n.引诱，勾引 （尤指性方面）  
 
-# sequ (Latin: sequi, “to follow”)  
+# sequ (“to follow”)  
 - sequential a.连续的  
 - subsequent a.随后的  
 - consequential a.结果的，重要的  
 - non sequitur 不合理的
 
-# ambi (Latin: ”on both sides“ or“around“) 
+# ambi (”on both sides“ or“around“) 
 - ambiguous a.模糊不清的  
 - ambient a.周围的  
 - ambivalent a.矛盾的  
 - ambit n.范围  (an abstract range)
 
-# epi (Greek: “on, over” or “attached to”)
+# epi ( “on, over” or “attached to”)
 - epilogue (log - word, speech, reason) n.结语  
 - epiphyte n.附生植物  
 - epitaph (taphos - tomb, funeral) n.碑文，墓志铭（inscription）  
 - epithet n.绰号  
 
-# hyp/hypo (Greek: “below, under”) 
+# hyp/hypo (“below, under”) 
 - hypochondriac n.疑病患者  
 - hypoglycemia (glyk - sweet) n.低血糖症 
 - hypothermia n.低体温症  
 - hypothetical (maybe to a theory) a.假设 
 
-# therm/thermo (Greek: “warm”) 
+# therm/thermo (“warm”) 
 - thermal a.热的，保热的  
 - thermodynamics (dynam - power) n. 热力学  
 - thermonuclear a.热核的  
 
-# poly (Greek: polys, “many”)  
+# poly (“many”)  
 - polyp n.水吸虫，息肉  
 - polyglot (glot - language) n.通晓多种语言的人  
 - polymer n.聚合物  
 - polygraph (graph - to write) n.多种波动描记器，测谎仪等… 
 - polygon n.多边形
 
-# prim (Latin: primus, “first”)
+# prim ( “first”)
 - primary a.主要的，初级的
 - primeval a.原始的
 - primal a.原始的，最初的  
@@ -133,7 +133,7 @@
 - primate n.灵长类  
 - primordial a.原始的，原生的  
 
-# hom/homo (Greek: homos, “same”)
+# hom/homo (“same”)
 - homograph  n.同形异义词
 - homosexual n.同性恋
 - homonym n.同音（同形）异义词  
@@ -141,19 +141,19 @@
 - homologous a.同源的  
 - homogenize v.使均匀，使类同  
 
-# dis (Latin: „apart“, also means „opposite“ or „not“)  
+# dis („apart“,  „opposite“ or „not“)  
 - dissuade ( -- persuade) v.劝阻  
 - disorient v.使…迷惑，使…失去方向  
 - discredit ([[vocabulary builder#cred (“to believe” “to entrust”)]])v.使人对…产生怀疑  
 - dislodge v.驱逐
 
-# vor (Latin: vorare “to eat”, ivorous - eaters of certain kinds of food)  
+# vor (“to eat”, ivorous - eaters of certain kinds of food)  
 - carnivorous ([[vocabulary builder#carn (Latin “flesh””meat”)]]) a.食肉的  
 - herbivorous (herb - 草药) a.食草的  
 - insectivorous a.食虫的  
 - voracious a.贪婪的  
 
-# carn (Latin: “flesh””meat”)  
+# carn (“flesh””meat”)  
 - carnation n.康乃馨 adj.肉色的
 - carnival n.嘉年华
 - carnage n.大屠杀  （数量多的死亡，比如意外死亡，massacre和slaughter一般是战争中的屠杀）
@@ -166,23 +166,27 @@
 - credible a.可靠的，可信的  
 - credulity n.轻信  
 - credo n.信条  
-# fid (Latin: fides, “faith” or “trust”)
+# fid (“faith” or “trust”)
 - confident  adj.自信的; 确信的|
 - diffident a.缺乏自信的  
 - affidavit n.宣誓书  ( often used in court)
 - fiduciary n.信托的  
 - perfidy n.不诚实  
 
-**curr/curs (Latin: currere, “to run”)**  
-concurrent a.同时发生的  
-cursory a.草率的，匆忙的  
-discursive a.离题的  
-precursor n.前兆  
-**ped (Latin: “foot”)**  
+# curr/curs ( “to run”)
+- current a.当前的 n.水流，电流
+- excursion n.远足
+- concurrent a.同时发生的  
+- cursory a.草率的，匆忙的  
+- discursive a.离题的  
+- precursor n.前兆  
+
+# ped (Latin: “foot”)  
 quadruped n.四足动物  
 pedigree n.血统  
 impediment n.阻碍  
 pedestrian n.行人，步行者  
+
 **flect (flectere, “to bend”)**  
 deflect v.转向，偏斜  
 reflective a.反射的，沉思的  
