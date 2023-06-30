@@ -181,18 +181,19 @@
 - discursive a.离题的  
 - precursor n.前兆  
 
-# ped (Latin: “foot”)  
-quadruped n.四足动物  
-pedigree n.血统  
-impediment n.阻碍  
-pedestrian n.行人，步行者  
+# ped (“foot”)  
+- quadruped n.四足动物  
+- pedigree n.血统  
+- impediment n.阻碍  
+- pedestrian n.行人，步行者  
 
 **flect (flectere, “to bend”)**  
 deflect v.转向，偏斜  
 reflective a.反射的，沉思的  
 genuflect v.跪拜  
 inflection n.音调变化，曲折变化（语言学）  
-**post (Latin: “after”)**  
+
+# post (Latin: “after”)  
 posterior n./a. 后部的  
 posthumous a.死后的，死后出版的  
 postmodern a.后现代的  
