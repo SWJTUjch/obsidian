@@ -1,7 +1,7 @@
 # bene - well
-- benediction (dict - to speak) 祝福
-- benefactor (fac - to make or do) 赞助，捐献
-- beneficiary  受益人
+- benediction (dict - to speak) 祝福 
+- benefactor (fac - to make or do) 赞助，捐献 
+- beneficiary  受益人 
 - benevolence 仁爱，捐助
 
 # am - to love
@@ -11,7 +11,7 @@
 - paramour 情人
 
 # bell - war
-- antebellum (ante - before)  战前岁月的
+- antebellum ([[vocabulary builder#ante (“before” “in front of”)]])  战前岁月的
 - bellicose 好争辩的 (used to describe a nation and their leaders)
 - belligerence 好战 (used to describe from person to global)
 - rebellion 谋反，叛逆
@@ -200,7 +200,63 @@
 - postmodern a.后现代的  
 - postmortem a.死后的，随后的
 
+# mal (“bad”) 
+- malady n. 疾病
+- malpractice n. 玩忽职守
+- malodorous adj. 恶臭的
+- malefactor n.犯罪分子
+- malevolent a.有恶意的  (deep and lasting)
+- malice n.恶意
+- malicious a.恶毒的  (petty and spiteful)
+- malign v.中伤，诽谤  
+- malnourished a.营养失调的  
 
+# cata (“down”)  
+- catalogue n. 目录
+- catapult n. 弹弓，弹射器 v.猛投
+- cataclysm (-clysm "to wash") n.大灾变，大变动  
+- catastrophes (many catalysms) n. 灾难，灾祸
+- catacomb n.地下穴墓  
+- catalyst n.催化剂  
+- catatonic a.紧张性神经症的  
+
+# prot/proto („first in time“ or „first formed“)
+- protagonist n.主角  
+- protocol n.协议  
+- protoplasm n.细胞质  
+- prototype n.原型  
+
+# ante (“before” “in front of”) 
+
+- antediluvian n.远古的
+- antechamber n.前厅  
+- antedate v.先于  
+- antecedent (ced - )n.先行词，前情  
+- anterior a.前面的  (medical or scholarly contents)
+
+# ortho (“straight””right” or “true”)  
+odontics n.畸齿矫正学  
+orthodox a.正统的  
+orthopedics n.矫形术  
+orthography n.正字法  
+
+# rect (“straight” or “right”)  
+rectitude n.公正  
+rectify v.改正  
+rectilinear a.直线运动的，直线的  
+directive n.指示  
+
+# eu ( “well””good” or “true”) 
+eugenic a.优生的  
+euphemism n.委婉语  
+euphoria n.欢快  
+eulogy n.颂词  
+
+# dys (“bad” “difficult”)  
+dystopia n.反乌托邦  
+dyslexia n.难语症  
+dyspeptic a.消化不良的，坏脾气的  
+dysplasia n.发育不良
 
 
 
