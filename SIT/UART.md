@@ -16,6 +16,57 @@
 - UART0_RTS <--> P206 <--> K9
 - UART0_CTS <--> P207 <--> L9
 
+# How to get the transfer time of UART?
+
+- Open UART
+```
+p_uart->p_api->open(p_uart->p_ctrl, p_uart->p_cfg);
+```
+- Reset the send buffer and receive buffer
+- 
+
+
+_ERBFI_ : Enable Received Data Available Interrupt. This is used to enable/disable the generation of Received Data Available Interrupt and the Character Timeout Interrupt 'if in FIFO mode and FIFO's enabled'. These are the second highest priority interrupts.
+
+_ETBET_ : Enable Transmit Holding Register Empty Interrupt. This is used to enable/disable the generation of Transmitter Holding Register Empty Interrupt. This is the third highest priority interrupt. (Used in transmit)
+
+_ELSI_ : Enable Receiver Line Status Interrupt. This is used to enable/disable the generation of Receiver Line Status Interrupt. This is the highest priority interrupt.
+
+_PTIME_ : Programmable THRE Interrupt Mode Enable. Writeable only when THRE_MODE_USER == Enabled, always readable. This is used to enable/disable the generation of THRE Interrupt. (Used in transmit)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
