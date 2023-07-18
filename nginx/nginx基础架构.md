@@ -50,6 +50,32 @@ struct ngx_module_s {
 ```
 
 
+# Nginx启动过程
+- 获取参数：根据命令行传递的参数，将一些设置存储进static类型的变量中。
+``` C
+ngx_get_options(argc, argv);
+```
+- 创建log
+```C
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-﻿# shell编程
+# shell编程
 ```
 #!/bin/bash			//声明使用的是什么shell解析器
 ```
