@@ -35,13 +35,78 @@ _ELSI_ : Enable Receiver Line Status Interrupt. This is used to enable/disable t
 _PTIME_ : Programmable THRE Interrupt Mode Enable. Writeable only when THRE_MODE_USER == Enabled, always readable. This is used to enable/disable the generation of THRE Interrupt. (Used in transmit)
 
 
+# Console framework API structure
+
+``` C
+typedef struct st_terminal_api
+
+{
+/** @brief Initialize the terminal channel */
+tmpl_err_t (* init) (void);
+/** @brief Prints prompt string from menu, waits for input, parses input based on menu, and calls callback function
+* if a command is identified. */
+tmpl_err_t (* prompt)(tmpl_console_menu_t * p_menu);
+/** @brief Looks for input string in menu, and calls callback function if found. */
+tmpl_err_t (* parse)(tmpl_ctrl_t *p_tmpl_ctrl, tmpl_console_menu_t * p_menu);
+/** @brief Reads data into the destination */
+tmpl_err_t (* read)( void* pBufferIn, uint16_t BufferSize, uint16_t *pDataLen);
+/** @brief The write API write data from buffer to the terminal */
+tmpl_err_t (* write)( void* pBufferOut, uint16_t DataLen);
+/** @brief The print API print msg to the terminal directly */
+tmpl_err_t (* print)(char* msg, ...);
+/** @brief The print API print msg to the terminal directly */
+tmpl_err_t (* table_print)(table_info_t *table_info_ptr, uint32_t *test_data_ptr, bool result);
+/** @brief Exit the terminal channel */
+tmpl_err_t (* exit) (void);
+/** @brief Stores version information in provided pointer. */
+tmpl_err_t (* versionGet)(tmpl_version_t * const p_version);
+} terminal_api_t;
+```
+
+``` C
+typedef struct st_heartbeat_api
+{
+/** @brief Initialize the heartbeat with HAL driver and set the initialization timeout value */
+tmpl_err_t (* init) (tmpl_heartbeat_cfg_t *p_cfg);
+/** @brief Enable the heartbeat function */
+tmpl_err_t (* enable) (void);
+/** @brief Disable the heartbeat function */
+tmpl_err_t (* disable) (void);
+/** @brief Refresh the status of heartbeat to avoid timeout dead */
+tmpl_err_t (* refresh) (void);
+/** @brief Set the timeout value for heartbeat function */
+tmpl_err_t (* timeout) (uint32_t time_out);
+/** @brief Get current observe value of heartbeat for measurement */
+tmpl_err_t (* observe) (tmpl_heartbeat_observe_t *p_observe);
+/** @brief Get tick difference from observed value */
+tmpl_err_t (* tickDiff) (tmpl_heartbeat_observe_t *p_observe_start, tmpl_heartbeat_observe_t *p_observe_end, uint64_t *diff);
+/** @brief Stores version information in provided pointer. */
+tmpl_err_t (* versionGet)(tmpl_version_t * const p_version);
+} heartbeat_api_t;
+```
+
+```C
+typedef struct st_report_api
+{
+/** @brief Initialize the report with verbose mode value and reset the command execute index */
+tmpl_err_t (* init) (tmpl_report_cfg_t *p_cfg);
+/** @brief Set verbose mode status, Enable or disable the verbose mode */
+tmpl_err_t (* verboseCtrl) (tmpl_report_verbose_mode_t verboseMode);
+/** @brief Print test result information with verbose control */
+tmpl_err_t (* print) (char* msg, ...);
+/** @brief Checking the test result value with criteria for pass or fail */
+tmpl_err_t (* criteriaCheck) (uint8_t *funcName, int32_t *p_cmdArgint,
+uint32_t resultValue, uint32_t criteria_min, uint32_t criteria_max,
+uint32_t status);
+/** @brief Generate the totally report information of project */
+tmpl_err_t (* reportGen) (void);
+/** @brief Stores version information in provided pointer. */
+tmpl_err_t (* versionGet)(tmpl_version_t * const p_version);
+} report_api_t;
+```
 
 
-
-
-
-
-
+# Initialization flow
 
 
 
