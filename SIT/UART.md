@@ -19,12 +19,39 @@
 # How to get the transfer time of UART?
 
 - Open UART
-```
+```C
 p_uart->p_api->open(p_uart->p_ctrl, p_uart->p_cfg);
 ```
 - Reset the send buffer and receive buffer
-- Read UART
+- Read UART (enable receiver interrupt)
+```C
+p_uart->p_api->read(p_uart->p_ctrl, g_dest, data_size);
+```
+- Observe start time
+```C
+g_heartbeat_service.observe(&start_ref_time);
+```
+- Write UART (enable transmitter interrupt)
+```C
+p_uart->p_api->write(p_uart->p_ctrl, g_src, data_size);
+```
+- Wait for the end of  transmit and observe end time.
+```C
+g_heartbeat_service.observe(&end_ref_time);
+```
+- Calculate the diff time.
+```C
+g_heartbeat_service.tickDiff(&start_ref_time, &end_ref_time, &diff);
 
+frequency = R_FSP_SystemClockHzGet(FSP_PRIV_CLOCK_SYS);
+
+measurement_case->tx_time_ms =
+
+(uint32_t)((diff * ONE_THOUSAND) / frequency);
+```
+
+
+_r_uart_usod.c_
 
 _ERBFI_ : Enable Received Data Available Interrupt. This is used to enable/disable the generation of Received Data Available Interrupt and the Character Timeout Interrupt 'if in FIFO mode and FIFO's enabled'. These are the second highest priority interrupts.
 
