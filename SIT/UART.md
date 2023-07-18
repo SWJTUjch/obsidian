@@ -23,7 +23,7 @@
 p_uart->p_api->open(p_uart->p_ctrl, p_uart->p_cfg);
 ```
 - Reset the send buffer and receive buffer
-- 
+- Read UART
 
 
 _ERBFI_ : Enable Received Data Available Interrupt. This is used to enable/disable the generation of Received Data Available Interrupt and the Character Timeout Interrupt 'if in FIFO mode and FIFO's enabled'. These are the second highest priority interrupts.
@@ -108,7 +108,12 @@ tmpl_err_t (* versionGet)(tmpl_version_t * const p_version);
 
 # Initialization flow
 
-
+- Initialize the external interrupt.
+	- Open
+	- Enable
+- Initialize terminal.
+- Initialize heartbeat service.
+- Initialize report service.
 
 
 
