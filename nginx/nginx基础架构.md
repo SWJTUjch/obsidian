@@ -55,9 +55,9 @@ struct ngx_module_s {
 ``` C
 ngx_get_options(argc, argv);
 ```
-- 创建log
+- 创建log：将其中的ngx_error_log设置为NGX_ERROR_LOG_PATH（logs/error.log），设置ngx_prefix参数为当前目录，然后根据以上两个路径，以append和create的方式打开error.log，这里在拼接路径时需要在堆上创建一块内存，打开文件后这块内存就没用了，所以最后需要释放掉，而这个打开的文件描述符需要存放到ngx_log_file中。
 ```C
-
+ngx_log_init(ngx_prefix, ngx_error_log);
 ```
 
 
