@@ -59,7 +59,10 @@ ngx_get_options(argc, argv);
 ```C
 ngx_log_init(ngx_prefix, ngx_error_log);
 ```
-
+- 设置一个临时的ngx_cycle
+	- 创建一个16Byte对齐，1024Byte大小的内存池。
+	- 分段存储传入的参数个数和参数，其中参数用一个二维指针数组存储。
+	- 
 
 
 
