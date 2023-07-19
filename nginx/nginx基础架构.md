@@ -62,7 +62,14 @@ ngx_log_init(ngx_prefix, ngx_error_log);
 - 设置一个临时的ngx_cycle
 	- 创建一个16Byte对齐，1024Byte大小的内存池。
 	- 分段存储传入的参数个数和参数，其中参数用一个二维指针数组存储。
+- 配置文件路径
+- 初始化日志
+- 初始化slab
+- 如果处于升级中，则监听环境变量里传递的监听句柄
+	- 初始化listening的array
+	- 获取环境变量填充listening
 	- 
+
 
 
 
