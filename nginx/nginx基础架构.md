@@ -67,8 +67,8 @@ ngx_log_init(ngx_prefix, ngx_error_log);
 - 初始化slab
 - 如果处于升级中，则监听环境变量里传递的监听句柄
 	- 初始化listening的array
-	- 获取环境变量填充listening
-	- 
+	- 获取环境变量填充listening，其中fd保存打开的文件描述符
+- 预初始化模块
 
 
 
