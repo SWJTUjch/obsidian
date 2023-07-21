@@ -10,8 +10,13 @@
 - 
 
 ## Information paramaters
-- Read Buffer Size command:
-- Read BD_ADDR command:
+5. Read Buffer Size command:
+	- ACL_Data_Packet_Length: 确定ACL数据包中包含的L2CAP段的大小
+	- Synchronous_Data_Packet_Length: 确定HCI同步数据包的最大大小
+	- total_Num_ACL_Data_Packets: 可以存储在控制器的数据缓冲区中的HCI ACL数据包的总数。
+	- total_Num_Synchronous_Data_Packets: 可以存储在控制器的数据缓冲区中的HCI 同步数据包的总数。
+	- 如果控制器不支持HCI上的SCO或eSCO，则应将total_Num_Synchronous_Data_Packets设置为零，在这种情况下，主机应忽略Synchronous_DData_Packet_Length参数。
+6. Read BD_ADDR command: 对BR/EDR来说是读取蓝牙控制器地址，对于LE来说是读取公共设备地址。
 
 ## events
 1. Command complete event: 主机发出请求后向主机传数据，或者主机发出一个命令后向主机传参数。
@@ -22,6 +27,12 @@
 
 ## LE Controller commands
 1. LE Set Event Mask command: 控制HCI为主机生成哪些LE事件，这里有任意一位设置了都要将前面的 Event_Mask 中的 LE Meta event 置为1
-2. LE Read Buffer Size command: 
-3. LE Read Local Supported Features command
+2. LE Read Buffer Size command: 以下数据长度不包括数据包头部
+	- 读取从主机发送到控制器的ACL数据包和同步数据包的数据部分的最大大小以及数据包的总数。如果主机希望发送给控制器的数据包大于这个size，就需要把数据包分段发送（数据包括：HCI ISO中的可选字段）。
+	- 如果控制器支持ISO，还要返回ISO数据包的长度（确定ISO数据包中SDU段的大小）和总数。
+	- LE_ACL_Data_Packet_Length返回参数应用于确定ACL数据包中包含的L2CAP PDU段的最大大小
+	- total_Num_LE_ACL_Data_Packets返回参数包含可以存储在控制器的数据缓冲区中的HCI ACL数据包的总数
+3. LE Read Local Supported Features command: 读取支持的 LE 功能
+4. 
+	
 - 
