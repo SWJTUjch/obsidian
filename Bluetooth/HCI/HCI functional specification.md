@@ -33,6 +33,8 @@
 	- LE_ACL_Data_Packet_Length返回参数应用于确定ACL数据包中包含的L2CAP PDU段的最大大小
 	- total_Num_LE_ACL_Data_Packets返回参数包含可以存储在控制器的数据缓冲区中的HCI ACL数据包的总数
 3. LE Read Local Supported Features command: 读取支持的 LE 功能
-4. 
-	
-- 
+4. LE Set Random Address command: 主机要求控制器生成一个随机地址，必须在广播/扫描/初始化之前生效。对于扩展广播命令来说，只要你敢想扫描和初始化，还需要专门的命令设置广播地址。
+
+
+22. LE Encrypt command: 主机要求控制器通过一个key去加密128bit的plaintext_data
+23. LE Rand command: 主机要求控制器产生一个8字节的随机数

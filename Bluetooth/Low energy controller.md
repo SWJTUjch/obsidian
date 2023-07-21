@@ -6,12 +6,13 @@
 - 还需要读取所支持的LE的特性并选择希望使用的特性。
 - 最后读取设备的地址。
 ![initial setup](Low_energy_controller/initial_setup.jpg)
-## 随机设备地址
+## 设置随机设备地址
 - 蓝牙设备有两个地址，一个是 public address，一个是 random address
-- 需要由主机发起一个LE Rand的命令产生8位的随机数
-- 
-
-
+- 需要由主机发起一个LE Rand的命令产生8字节的随机数
+- 加密
+- 设置随机地址
+![initial setup](Low_energy_controller/random_device_address.jpg)
+## 筛选接受列表
 
 
 
