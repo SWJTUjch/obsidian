@@ -13,7 +13,10 @@
 - 设置随机地址
 ![initial setup](Low_energy_controller/random_device_address.jpg)
 ## 筛选接受列表
-
+- 在初始化、扫描或广播之前，可以清除列表并添加或设备
+- 告知控制器列表大小
+- 清除列表
+- 向列表中增加设备
 
 
 
