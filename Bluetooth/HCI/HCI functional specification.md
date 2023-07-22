@@ -53,7 +53,7 @@
 
 
 
-
+34. LE Read Suggested Default Data Length command: 
 35. LE Write Suggested Default Data Length command: 为控制器指定负载的最大传输数量和为新连接的LL数据PDU分组的最大传输时间
 
 
@@ -70,6 +70,21 @@
 
 
 40. LE Clear Resolving List command: 该命令可以在地址解析失效时随时使用。
-41. LE Read Resolving List Size command: 由于控制器中存储过滤列表的内存可以被用于其他用途，所以需要每次询问。
-42. 
-43. 
+41. LE Read Resolving List Size command: 由于控制器中存储该列表的内存可以被用于其他用途，所以需要每次询问。
+42. LE Set Advertising Parameters command: 
+	- 设置最大/最小扫描间隔
+	- 对于高占空比的广播，会忽略最大/最小间隔。
+	- 确定包的类型
+	- 广播数据包中的地址类型
+	- 地址和地址类型用于在解析列表中定位对应的本地IRK；该IRK用于生成广播中使用的自己的地址。
+
+
+
+
+
+70. LE Add Device To Periodic Advertiser List command: 用于增加一个项目，包括设备地址和SID（set ID），会立即生效。
+
+
+72. LE Clear Periodic Advertiser List command: 从列表中删除所有项，
+73. LE Read Periodic Advertiser List Size command: 由于控制器中存储该列表的内存可以被用于其他用途，所以需要每次询问。
+74. 
