@@ -36,5 +36,40 @@
 4. LE Set Random Address command: 主机要求控制器生成一个随机地址，必须在广播/扫描/初始化之前生效。对于扩展广播命令来说，只要你敢想扫描和初始化，还需要专门的命令设置广播地址。
 
 
+
+14. LE Read Filter Accept List Size command: 由于控制器中存储过滤列表的内存可以被用于其他用途，所以需要每次询问。
+15. LE Clear Filter Accept List command: 清空过滤列表，以下情况时不能清空：
+	-  广播/扫描过滤策略使用了该列表并且已经开始
+	- 初始化过滤策略使用该列表并且创建和扩展创建连接被挂起
+16. LE Add Device To Filter Accept List command: 向列表中添加单个设备，以上场景中不能使用。
+	- 空间已满时会返回错误
+	- 已存在则不会重复添加并返回success
+	- Address_Type为0xFF时表示匿名广播
+
+
+
 22. LE Encrypt command: 主机要求控制器通过一个key去加密128bit的plaintext_data
 23. LE Rand command: 主机要求控制器产生一个8字节的随机数
+
+
+
+
+35. LE Write Suggested Default Data Length command: 为控制器指定负载的最大传输数量和为新连接的LL数据PDU分组的最大传输时间
+
+
+
+
+
+
+38. LE Add Device To Resolving List command
+	- 添加的设备应设置为网络隐私模式。
+	- 如果添加的设备已存在，则返回错误码
+	- 
+
+
+
+
+40. LE Clear Resolving List command: 该命令可以在地址解析失效时随时使用。
+41. LE Read Resolving List Size command: 由于控制器中存储过滤列表的内存可以被用于其他用途，所以需要每次询问。
+42. 
+43. 
