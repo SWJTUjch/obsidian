@@ -47,8 +47,9 @@
 6. LE Read Advertising Physical Channel Tx Power command: 读取用于LE广播物理信道分组的发射功率电平。
 7. LE Set Advertising Data command: 设置数据字段的长度，以及在广播阶段发送重要的数据包。如果启用了广播，那么下次广播就使用新设置，如果未启用，则先保存，在启用后设置。如果正在广播，则可以使用新的或旧数据。
 8. LE Set Scan Response Data command: 用于设置具有数据字段的扫描数据包中使用的数据。设置时机同上。
-9. LE Set Advertising Enable command: 启用或停止广播，根据前面设置的时间控制定时器。
-	- 启用之后，控制器应该持续广播并且在收到该命令中参数为0x00时（使用，禁用广播。
+9. LE Set Advertising Enable command: 启用或停止广播，管理前面设置的时间控制定时器。
+	- 启用之后，控制器应该持续广播并且在收到该命令中参数为0x00时（使用广播建立连接或者高占空比定向广播超时），禁用广播。
+	- 当广播类型设置为0x00 0x01 0x04，且禁用广播时，可能会存在竞争条件，创建连接前可能不会停止广播。
 
 
 
