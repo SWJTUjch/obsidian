@@ -34,6 +34,22 @@
 	- total_Num_LE_ACL_Data_Packets返回参数包含可以存储在控制器的数据缓冲区中的HCI ACL数据包的总数
 3. LE Read Local Supported Features command: 读取支持的 LE 功能
 4. LE Set Random Address command: 主机要求控制器生成一个随机地址，必须在广播/扫描/初始化之前生效。对于扩展广播命令来说，只要你敢想扫描和初始化，还需要专门的命令设置广播地址。
+5. LE Set Advertising Parameters command: 
+	- 设置最大/最小扫描间隔
+	- 对于高占空比的广播，会忽略最大/最小间隔。
+	- 确定包的类型
+	- 广播数据包中的地址类型
+	- 地址和地址类型用于在解析列表中定位对应的本地IRK；该IRK用于生成广播中使用的自己的地址。
+	- 如果Own_Address_Type时0x02或0x03，则Peer_Address_Type应该设置成对应的0x00或0x01.
+	- Advertising_Channel_Map指示可用的信道
+	- Advertising_Filter_Policy在设置了定向广播时会被忽略
+	- 控制器在广播时，主机不能发出这个命令
+6. LE Read Advertising Physical Channel Tx Power command: 读取用于LE广播物理信道分组的发射功率电平。
+7. LE Set Advertising Data command: 设置数据字段的长度，以及在广播阶段发送重要的数据包。如果启用了广播，那么下次广播就使用新设置，如果未启用，则先保存，在启用后设置。如果正在广播，则可以使用新的或旧数据。
+8. LE Set Scan Response Data command: 用于设置具有数据字段的扫描数据包中使用的数据。设置时机同上。
+9. LE Set Advertising Enable command: 启用或停止广播，根据前面设置的时间控制定时器。
+	- 启用之后，控制器应该持续广播并且在收到该命令中参数为0x00时（使用，禁用广播。
+
 
 
 
@@ -71,17 +87,8 @@
 
 40. LE Clear Resolving List command: 该命令可以在地址解析失效时随时使用。
 41. LE Read Resolving List Size command: 由于控制器中存储该列表的内存可以被用于其他用途，所以需要每次询问。
-42. LE Set Advertising Parameters command: 
-	- 设置最大/最小扫描间隔
-	- 对于高占空比的广播，会忽略最大/最小间隔。
-	- 确定包的类型
-	- 广播数据包中的地址类型
-	- 地址和地址类型用于在解析列表中定位对应的本地IRK；该IRK用于生成广播中使用的自己的地址。
-	- 如果Own_Address_Type时0x02或0x03，则Peer_Address_Type应该设置成对应的0x00或0x01.
-	- Advertising_Channel_Map指示可用的信道
-	- Advertising_Filter_Policy在设置了定向广播时会被忽略
-	- 控制器在广播时，主机不能发出这个命令
-	- 
+
+
 
 
 
