@@ -25,6 +25,22 @@
 	- Command_Opcode: 表示产生这个回复的操作码，需要根据这个操作码确定后面数据应该如何解析
 	- Return_Paramaters: 控制器返回的数据，比如Command_Opcode = 0x0002，那么Return_Paramaters就应该按1oct(status)+16oct(support_commands)进行解析
 
+
+
+
+
+
+
+
+
+
+
+
+65. LE Meta event
+	- LE Connection Complete event: 
+		- 如果创建成功，返回给两边的主机，否则，只返回给发起创建连接的主机
+		- 创建连接后，控制器应分配connection_Handle，并在这种情况下将其传递给主机
+
 ## LE Controller commands
 1. LE Set Event Mask command: 控制HCI为主机生成哪些LE事件，这里有任意一位设置了都要将前面的 Event_Mask 中的 LE Meta event 置为1
 2. LE Read Buffer Size command: 以下数据长度不包括数据包头部
