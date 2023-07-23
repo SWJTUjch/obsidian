@@ -77,6 +77,11 @@
 	- 确定包的类型
 	- 广播数据包中的地址类型
 	- 地址和地址类型用于在解析列表中定位对应的本地IRK；该IRK用于生成广播中使用的自己的地址。
+	- 如果Own_Address_Type时0x02或0x03，则Peer_Address_Type应该设置成对应的0x00或0x01.
+	- Advertising_Channel_Map指示可用的信道
+	- Advertising_Filter_Policy在设置了定向广播时会被忽略
+	- 控制器在广播时，主机不能发出这个命令
+	- 
 
 
 
