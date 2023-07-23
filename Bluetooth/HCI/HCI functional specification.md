@@ -51,7 +51,7 @@
 	- 启用之后，控制器应该持续广播并且在收到该命令中参数为0x00时（使用广播建立连接或者高占空比定向广播超时），禁用广播。
 	- 当广播类型设置为0x00 0x01 0x04，且禁用广播时，可能会存在竞争条件，创建连接前可能不会停止广播。
 
-
+12. 
 
 
 14. LE Read Filter Accept List Size command: 由于控制器中存储过滤列表的内存可以被用于其他用途，所以需要每次询问。
@@ -88,6 +88,14 @@
 
 40. LE Clear Resolving List command: 该命令可以在地址解析失效时随时使用。
 41. LE Read Resolving List Size command: 由于控制器中存储该列表的内存可以被用于其他用途，所以需要每次询问。
+
+
+
+53. LE Set Extended Advertising Parameters command: 
+
+
+
+
 
 
 
