@@ -125,7 +125,7 @@
 
 ![](Device_synchronizes_with_BIG.png)
 - ADV_EXT_IND会指向AUX_ADV_IND，然后才能发送AUX_SYNC_IND，ACAD是Additional Controller Advertising Data
-- ==状态转移？Create是随时都可以出现的吗？==
+- ==状态转移？==
 - 
 ### LE Periodic Advertising Create Sync command
 无论是否启用扫描，都可以发出该命令。但是，只有在启用扫描时才能进行同步。
