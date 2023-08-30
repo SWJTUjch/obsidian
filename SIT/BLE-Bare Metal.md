@@ -100,7 +100,7 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 - sys
 	- stby : stby (on|off|get)
 - gap
-	- adv : adv (legacy|ext|non-conn|periodic) (start|stop) _Start or stop advertising._
+	- adv : adv (legacy|ext|non-conn|periodic) (start|stop|remove) _Start or stop advertising._
 	- scan : scan (filter_ad_type) (filter_data) (addr_type) (-wl)
 	- conn : conn (rnd | pub) {address}
 	- priv : priv {irk} {privacy_mode} _Set local device privacy_
