@@ -67,8 +67,32 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 - 主循环中每轮更新一次时间，第一次进入会设置时间，时间减为0，并且设置了blinky的标志，且不是FF，就要获取引脚当前状态并反转状态，然后重新设置时间
 
 
-## SIT 
+## automation
 1. How the log record? 
 		Windows PC record all of the log and receive logs from Ubuntu PC, while Ubuntu PC record log local and report to Windows PC to avoid the disconnection of socket.
 2. Can Ubuntu PC control USBRelay?
 3. Download bin and elf depart? Only download bin once.
+
+
+
+
+## cmd
+- vs
+	- txp
+		- set
+		- g
+	- test
+	- addr
+	- scheme
+	- rfctrl
+	- rand
+	- scan_ch_map
+		- set
+		- get
+
+
+
+- txp
+	- set(Set Tx power) : Usage: vs txp set conn_hdl <tx_poewr(0-2)>
+	- get(Get Tx power) : Usage: vs txp get conn_hdl
+- 
