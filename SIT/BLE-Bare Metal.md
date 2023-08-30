@@ -76,7 +76,7 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 
 
 
-## cmd
+## supported cmd
 - vs
 	- txp
 		- set : set conn_hdl <tx_poewr(0-2)>
@@ -99,6 +99,20 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 	- close : close
 - sys
 	- stby : stby (on|off|get)
+- gap
+	- adv : adv (legacy|ext|non-conn|periodic) (start|stop) _Start or stop advertising._
+	- scan : scan start
+	- conn : conn {addr}
+	- priv : priv {irk} {privacy_mode} _Set local device privacy_
+	- auth : auth (start|passkey|numcmp) {conn_hdl|passkey|yes} _Start pairing or encryption. or Reply passkey entry or numeric comparison_
+	- device : device _List connecting devices_
+	- disconn : disconn conn_hdl 
+	- sync : sync create | term _Start sync establishment | teminate sync._
+	- wl : wl (reg|del|clear) _Register or delete or clear white list._
+	- conn_cfg : conn_cfg (update|data_len|phy|def_phy) _Update connection parameters | Set packet data length | Set PHY | Set Default PHY_
+	- ver :  ver _Get LL/HCI, Host, lib, BLE FIT module version._
+
+## have the API but not supported cmd
 - l2cap
 	- psm : psm (reg|dereg) psm (lwm: reg only)
 	- conn : conn (req|rsp|disconn) ...
@@ -110,7 +124,7 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 	- notify : notfiy conn_hdl attr_hdl values _Send notification_
 	- indicate : indicate conn_hdl attr_hdl values _Send indication_
 - gap
-	- adv : adv (legacy|ext|non-conn|periodic) (start|stop)  _Start or stop legacy advertising_
+	- adv : adv (start|stop)  _Start or stop legacy advertising_
 	- scan : scan \[ad_type\] \[ad_data\] _Start scanning_
 	- conn : conn addr (pub|rnd) _Create connection_
 	- disconn : disconn conn_hdl
@@ -119,8 +133,6 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 	- perd : perd (start|stop) _Start or stop periodic advertising_
 	- sync : 
 	- wl : wl (reg|del|clear) _Register or delete or clear white list_
-- 
-
 
 
 
