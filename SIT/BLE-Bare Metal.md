@@ -89,7 +89,7 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 		- set : set (curr|df) (pub|rnd) addr \[mcu_rst\]
 		- get : get (curr|df) (pub|rnd)
 	- scheme : scheme <scheme(hex)>
-	- rfctrl : rfctrl <power(on|off)> <option(0|1)> <clval(hex)> <slw_clk(hex)> <tx_power(0-2)> <rf_opt(hex)>
+	- rfctrl : rfctrl <power(on|off)> <option(0|1)> <clval(hex)> <slw_clk(hex)> <tx_power(0-2)> <rf_opt(hex)> _RF power control_
 	- rand : rand <rand_size(4-16)>
 	- scan_ch_map
 		- set : set <ch_map(1-7)>
