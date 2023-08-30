@@ -136,7 +136,13 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 
 
 
-
+RA4W3 menu
+- scan
+- connect
+- disconnect
+- write
+- read
+- notification
 
 
 
