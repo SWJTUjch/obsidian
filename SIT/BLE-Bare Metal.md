@@ -129,7 +129,7 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 	- conn : conn addr (pub|rnd) _Create connection_
 	- disconn : disconn conn_hdl
 	- device : device _List connecting devices_
-	- sec : security _Pairing_
+	- auth : security _Start pairing or encryption. or Reply passkey entry or numeric comparison_
 	- perd : perd (start|stop) _Start or stop periodic advertising_
 	- sync : 
 	- wl : wl (reg|del|clear) _Register or delete or clear white list_
