@@ -79,20 +79,66 @@ QSPI的XIP适用于需要高性能和快速启动的应用，例如嵌入式系�
 ## cmd
 - vs
 	- txp
-		- set
-		- g
+		- set : set conn_hdl <tx_poewr(0-2)>
+		- get : get conn_hdl
 	- test
-	- addr
-	- scheme
-	- rfctrl
-	- rand
+		- tx : tx <ch(0-39)> <data_len(0-255)> <payload(0-7)> <phy(1-4)> <tx_power(0-2)> <option(0-3)> <num_of_packet(0-65535)>
+		- rx : rx <ch(0-39)> <phy(1-3)>
+		- end : end
+	- addr 
+		- set : set (curr|df) (pub|rnd) addr \[mcu_rst\]
+		- get : get (curr|df) (pub|rnd)
+	- scheme : scheme <scheme(hex)>
+	- rfctrl : rfctrl <power(on|off)> <option(0|1)> <clval(hex)> <slw_clk(hex)> <tx_power(0-2)> <rf_opt(hex)>
+	- rand : rand <rand_size(4-16)>
 	- scan_ch_map
-		- set
-		- get
-
-
-
-- txp
-	- set(Set Tx power) : Usage: vs txp set conn_hdl <tx_poewr(0-2)>
-	- get(Get Tx power) : Usage: vs txp get conn_hdl
+		- set : set <ch_map(1-7)>
+		- get : get
+- ble
+	- reset : reset
+	- close : close
+- sys
+	- stby : stby (on|off|get)
+- l2cap
+	- psm : psm (reg|dereg) psm (lwm: reg only)
+	- conn : conn (req|rsp|disconn) ...
+	- credit : credit send credit
+	- data : data send conn_hdl lcid data_len
+- gatts
+	- get : get attr_hdl _Get char value from local GATT db_
+	- set : set attr_hdl values _Set local GATT db char value_
+	- notify : notfiy conn_hdl attr_hdl values _Send notification_
+	- indicate : indicate conn_hdl attr_hdl values _Send indication_
+- gap
+	- adv : adv (legacy|ext|non-conn|periodic) (start|stop)  _Start or stop legacy advertising_
+	- scan : scan \[ad_type\] \[ad_data\] _Start scanning_
+	- conn : conn addr (pub|rnd) _Create connection_
+	- disconn : disconn conn_hdl
+	- device : device _List connecting devices_
+	- sec : security _Pairing_
+	- perd : perd (start|stop) _Start or stop periodic advertising_
+	- sync : 
+	- wl : wl (reg|del|clear) _Register or delete or clear white list_
 - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
