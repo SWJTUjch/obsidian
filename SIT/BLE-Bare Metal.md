@@ -146,6 +146,12 @@ RA4W3 menu
 
 
 
+## Questions
+1. ble_abs_gap_callback 和 gap_cb的区别是什么？
+	- 初始化GAP层时，RM_BLE_ABS_Open 中通过R_BLE_GAP_Init初始化 ble_abs_gap_callback，用于初始化host stack，在调用所有的R_BLE的API之前都要调用这个函数
+	- 设置配对参数时设置gap_cb，该函数会在调用结束之后调用
+1. 
+2. 
 
 
 
