@@ -6,21 +6,11 @@ kanban-plugin: basic
 
 ## 
 
-- [ ] 自动化编译报错
-- [ ] 报销
-- [ ] target trace
-- [ ] IWDT
-- [ ] ADC
-- [ ] DAC
-- [ ] CGC
-- [ ] Meeting for automation
-- [ ] Show process in pycharm terminal
 
 
 ## 
 
 **完成**
-- [x] automation download in python
 
 
 ***
