@@ -1,4 +1,0 @@
-# reference
-- https://www.renesas.cn/cn/zh/document/qsg/renesas-synergy-e2-studio-v2021-10-or-higher-quick-start-guide?r=1506381
-- https://www.renesas.cn/cn/zh/document/qsg/renesas-synergy-platform-qe-capacitive-touch-e-studio-quick-start-guide?r=1506381
-- https://www.renesas.cn/cn/zh/support/document-search?doc_file_type%5BSchematics+%26+Design+Files%5D=Schematics+%26+Design+Files&doc_file_all_types%5BBlock+Diagram%5D=Block+Diagram&doc_file_all_types%5BEngineering%5D=Engineering&doc_file_all_types%5BLibrary%5D=Library&doc_file_all_types%5BPCB+Design+Files%5D=PCB+Design+Files&doc_file_all_types%5BSchematic%5D=Schematic&doc_file_type%5BDatasheets%5D=Datasheets&doc_file_all_types%5BDatasheet%5D=Datasheet&doc_file_all_types%5BDatasheet+-+Short-form%5D=Datasheet+-+Short-form&doc_file_all_types%5BDatasheet+Change+Notice%5D=Datasheet+Change+Notice&doc_category_tier_1=467666&doc_part_numbers=&keywords=&sort_order=DESC&sort_by=relevance#documentation-tools-results
