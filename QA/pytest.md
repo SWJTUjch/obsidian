@@ -75,7 +75,6 @@ pytest -m "smoke"              # 执行参数
 
 ## 框架实现一些前后置（固件，夹具）的处理
 1. 使用类方法实现
-
 ```python
 class Testcase:
     #这是每条测试用例执行前的初始化函数
@@ -109,13 +108,15 @@ def test_01(self, func):
 ```python
 @pytest.fixture(params = ['one','two','three'])
 def fun(request){
-	return request.param
+	print('前置')
+	yield request.param
+	print('后置')
 }
 def test_01(self, fun):
 	print(str(fun))
 ```
 - autouse = True：自动执行，默认False
 - ids：参数化时变量值
-- name：被fixture所标记的方法（别名）
+- name：被fixture所标记的方法（别名），后续不再使用方法名而是用name名
 
-
+3. 通过conftest.py和pytest.fixture()结合使用实现全局的前置应用
