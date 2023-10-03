@@ -25,17 +25,13 @@
 	3) 作用：可以改变pytest默认的行为（比如你不想用例以test开头，那就来这里改)
 	4) 运行规则：不管用主函数还是命令行模式运行，都会读取配置文件。
 ```python
-addopts  #命令行参数
-testpaths
-python_files
-python_classes
-python_functions
+addopts                             # 命令行参数
+testpaths                           # 测试用例路径
+python_files                        # 模块名规则
+python_classes                      # 类名规则
+python_functions                    # 方法名规则
+markers                             # 分组执行
 ```
-
-
-
-
-
 
 ## 参数
 - `-s`：输出用例调试信息包括`print`的内容
@@ -58,12 +54,32 @@ python_functions
 	pytest.main(['-vs', 'testcase/', '-k', '用例名中的字符'])
 ```
 
-## **pytest执行测试用例的顺序**
-
-默认从上到下。如果不想从上到下执行，则可以通过加标记的方式（需要安装pytest-ordering）：
+## pytest的标记
+1. 标记pytest执行测试用例的顺序
+	默认从上到下。如果不想从上到下执行，则可以通过加标记的方式（需要安装pytest-ordering）：
 ```python
 	@pytest.mark.run(order=n)
 ```
+2. 标记分组
+	先在用例里标记，然后-m参数运行即可
+```python
+@pytest.mark.smoke             # 测试方法之前标记
+
+pytest -m "smoke"              # 执行参数
+```
+3. 跳过测试用例
+```python
+@pytest.mark.skip（reason="还没写完"）                  # 无条件跳过
+@pytest.mark.skipif（x==1,reason="符合条件所以跳过"）   # 有条件跳过
+```
 
 
+
+
+  
+  
+作者：软件测试笔记  
+链接：https://www.jianshu.com/p/8b9362881baf  
+来源：简书  
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
