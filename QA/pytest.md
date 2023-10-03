@@ -120,3 +120,6 @@ def test_01(self, fun):
 - name：被fixture所标记的方法（别名），后续不再使用方法名而是用name名
 
 3. 通过conftest.py和pytest.fixture()结合使用实现全局的前置应用
+	1) conftest.py文件是单独存放的一个夹具配置文件，名称是不能更改的
+	2) 可以在不同的py文件中使用同一个fixture函数
+	3) 原则上conftest.py需要和运行的用例放到同一层，并且不需要做任何import 导入操作
