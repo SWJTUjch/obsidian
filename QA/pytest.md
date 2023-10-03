@@ -93,8 +93,29 @@ class Testcase:
 ```
 
 2. 使用fixture装饰器实现部分用例的前后置
-
-
-
+```python 
+@pytest.fixture(scope = "", params = "", autouse = "", ids = "", name = "")
+def func():
+	print('前置方法')
+	yield
+	print('后置方法')
+```
+- scope：fixture标记的方法的作用域，function（默认），class，module，package/session
+```python
+@pytest.fixture(scope = "function")
+def test_01(self, func):
+```
+- params：参数化（支持list[]，元组()，字典列表[{}{}{}]，字典元组({}{}{}）
+```python
+@pytest.fixture(params = ['one','two','three'])
+def fun(request){
+	return request.param
+}
+def test_01(self, fun):
+	print(str(fun))
+```
+- autouse = True：自动执行，默认False
+- ids：参数化时变量值
+- name：被fixture所标记的方法（别名）
 
 
