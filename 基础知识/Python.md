@@ -73,7 +73,7 @@ print(a, end=',')
 
 
 ## pass
-
+- 不执行任何动作
 
 ## is
 
@@ -91,6 +91,44 @@ print(a, end=',')
 
 
 # 基本语法
+## if
+```python
+if x < 0:
+	x = 0
+    print('Negative changed to zero')
+elif x == 0:
+    print('Zero')
+elif x == 1:
+    print('Single')
+else:
+    print('More')
+```
+## for
+```python
+users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
+# Strategy:  Iterate over a copy
+for user, status in users.copy().items():      # 字典类需要由kay和value
+    if status == 'inactive':
+        del users[user]
+```
+- for和while循环可以有else语句，这个语句是在循环结束后退出循环时执行，如果不是因为循环结束而退出（比如break出来的）就不执行
+## match（相当于switch）
+```python
+def http_error(status):
+    match status:
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case 418:
+            return "I'm a teapot"
+        case _:
+            return "Something's wrong with the internet"
+```
+
+
+
+
 
 
 # 常用函数
