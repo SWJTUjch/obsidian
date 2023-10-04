@@ -75,6 +75,11 @@ pytest -m "smoke"              # 执行参数
 
 ## 框架实现一些前后置（固件，夹具）的处理
 1. 使用类方法实现
+	1) setup、teardown:每条用例都会执行，既可以在类中使用，也可以在类外使用
+	2) setup_class、teardown_class:类中的测试用例执行前后只执行一次
+	3) setup_method、teardown_method:类中的每条测试用例执行前后都执行一次
+	4) setup_function、teardown_function:类外的每条测试用例执行前后都执行一次
+	5) setup_module、teardown_module:类外的测试用例执行前后只执行一次
 ```python
 class Testcase:
     #这是每条测试用例执行前的初始化函数
