@@ -1,1 +1,5 @@
-Maybe I am becoming old because I dont like to 
+Maybe I am becoming old because I don't like to travel around and don't like to watch the people mount people sea. So just like I planed, I spent seven days to stay at home.
+I tried to cook, it's not so successful but lucky I didn't go to hospital because food poisoning, and I didn't blow up my kitchen. I get to know tired does my mother and grandma cook and clean everyday.
+Besides, I read half of a book about how does the programs run in computer, mainly introduce the process of static link, dynamic link and load. It's very interesting, and I'll continue to read the remind parts and read it again.
+At the last day of the holiday, I went to Chengdu concert hall to watch The Journey of a Legendary Landscape Painting. But unfortunately, the dancers not all of the chief cast, so I must buy the tickets when it come to Chengdu next time.
+That's all.
