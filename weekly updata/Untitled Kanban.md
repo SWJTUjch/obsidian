@@ -4,13 +4,27 @@ kanban-plugin: basic
 
 ---
 
-## 
+## Plan
+
+- [ ] BLE mesh
 
 
+## In progress
 
-## 
+- [ ] review BLT SIT test plan
+- [ ] submit PWM, RTC GPT code
+- [ ] submit BLE BM & FreeRTOS SIT code
+- [ ] refine auto test script
+- [ ] debug BLE stress and NGT test
+
+
+## Done
 
 **完成**
+- [x] write BLE SIT test plan
+- [x] review  Verihealth test plan
+- [x] debug PWM code
+- [x] refine BLE BM & FreeRTOS SIT code
 
 
 ***
@@ -23,6 +37,7 @@ kanban-plugin: basic
 - [x] 自动化下载固件
 - [x] 自动化debug
 - [x] WDT
+- [ ] review Verihealth test report
 
 %% kanban:settings
 ```
