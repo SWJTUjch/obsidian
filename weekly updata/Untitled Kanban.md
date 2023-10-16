@@ -15,7 +15,7 @@ kanban-plugin: basic
 - [ ] submit PWM, RTC GPT code
 - [ ] submit BLE BM & FreeRTOS SIT code
 - [ ] refine auto test script
-- [ ] debug BLE stress and NGT test
+- [ ] debug BLE  NGT test
 
 
 ## Done
@@ -23,7 +23,6 @@ kanban-plugin: basic
 **完成**
 - [x] write BLE SIT test plan
 - [x] review  Verihealth test plan
-- [x] debug PWM code
 - [x] refine BLE BM & FreeRTOS SIT code
 
 
@@ -38,6 +37,7 @@ kanban-plugin: basic
 - [x] 自动化debug
 - [x] WDT
 - [ ] review Verihealth test report
+- [x] debug PWM code
 
 %% kanban:settings
 ```
