@@ -5,6 +5,7 @@
 1. 模块名必须以`test_`开头或`_test`结尾
 2. 测试类必须以`Test`开头且不能有`init`方法
 3. 测试方法必须以`test`开头
+4. 在Test类中，类成员变量在不同的test方法之间是不共享的，每个test方法会有一个私有的instance
 ## pytest测试用例运行方式
 1. 主函数模式
    1) 运行所有：pytest.main()
