@@ -11,25 +11,31 @@ kanban-plugin: basic
 
 ## In progress
 
-- [ ] review BLT SIT test plan
-- [ ] submit PWM, RTC GPT code
-- [ ] submit BLE BM & FreeRTOS SIT code
+- [ ] submit b2b code
+- [ ] write 5.x test plan
+- [ ] review 5.x test plan
 - [ ] refine auto test script
-- [ ] debug BLE  NGT test
 
 
 ## Done
 
 **完成**
-- [x] write BLE SIT test plan
-- [x] review  Verihealth test plan
-- [x] refine BLE BM & FreeRTOS SIT code
+- [x] refine code
+- [x] debug adv
+- [x] test pairing
 
 
 ***
 
 ## 归档
 
+- [x] write BLE SIT test plan
+- [x] review BLT SIT test plan
+- [x] review  Verihealth test plan
+- [x] submit PWM, RTC GPT code
+- [x] submit BLE BM & FreeRTOS SIT code
+- [x] debug BLE  NGT test
+- [x] refine BLE BM & FreeRTOS SIT code
 - [x] 验证BM和FreeRTOS
 - [x] 下载固件未覆盖
 - [x] viwer和commander下载的区别
