@@ -8,3 +8,34 @@
 # Service
 - There shall be no more than one Audio Stream Control Service (ASCS) instance on a server. 
 - ASCS shall be a `Primary Service` and the service UUID shall be set to Audio Stream Control
+- ASCS can be instantiated on devices that can accept the establishment of unicast Audio Streams.
+
+# Characteristic
+- Sink ASE Characteristic
+- Source ASE Characteristic
+- ASE Control Point Characteristic
+
+# ASE state management
+![Source ASE](Source_ASE.png)
+<center>Source ASE</center>
+![](Sink_ASE.png)
+<center>Sink ASE</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
