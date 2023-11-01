@@ -15,6 +15,9 @@ kanban-plugin: basic
 - [ ] write 5.x test plan
 - [ ] review 5.x test plan
 - [ ] refine auto test script
+- [ ] test and push code of rc.4
+- [ ] push code to bitbucket
+- [ ] OTA
 
 
 ## Done

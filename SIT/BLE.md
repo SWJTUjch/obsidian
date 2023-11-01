@@ -40,4 +40,8 @@ trouble shooting
 	asynchronous problem
 		abstract layer function
 		callback can't interrupt a callback
-		
+
+
+
+
+

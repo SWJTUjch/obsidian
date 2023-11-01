@@ -17,6 +17,7 @@ gnome-session &
 ```shell
 vncserver -geometry 1920x1080 -localhost no :1
 vncconfig -nowin&
+git clone "ssh://cn1947@gerrit-spsd.verisilicon.com:29418/Renesas/VSI/SIT"
 ```
 ## Install ssh server
 ```shell

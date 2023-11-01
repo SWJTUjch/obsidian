@@ -39,3 +39,9 @@ erpc: git clone https://github.com/EmbeddedRPC/erpc.git
 git reset --hard 6a571caf6d5042af5d63ff8745f2e4b24e14bc9f
 rpmsg-lite: git clone https://github.com/NXPmicro/rpmsg-lite.git
 git reset --hard 9775c19b960faa311df8bfe10107d7be5ef59db2
+
+
+
+MCUboot git clone ssh://gerrit-spsd.verisilicon.com:29418/Renesas/peaks/mcuboot，切换到git checkout -b renesas_main_1_9_selix  origin/renesas_main_1_9_selix
+ra/fsp/inc 切换到git checkout -b PULSAR-110-pulsar-develop-main origin/PULSAR-110-pulsar-develop-main
+FreeRTOS: git clone https://github.com/renesas/FreeRTOS.git, git submodule update --init --recursive
