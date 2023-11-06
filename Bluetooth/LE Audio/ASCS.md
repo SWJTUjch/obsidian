@@ -31,7 +31,13 @@
 - The server can expose a maximum of one Sink ASE per client per Sink ASE characteristic and one Source ASE per client per Source ASE characteristic, and the server should expose at a minimum the number of Sink ASE characteristics and/or Source ASE characteristics that it needs to support the number of concurrent established unicast Audio Streams that it can support for a single client.
 ![](ASE_CS.png)
 - Same characteristic have same UUID, but have different handle, handle indicate different stream, ASE_ID indicate different client.
+- The server should allocate local resources which can be affected by a change in the state of an ASE as it sees fit. The behavior of the server in deciding whether to accept client requests that can change the state of an ASE is left to the implementation unless otherwise defined by higher layers.
+- The characteristics can be configured for notifications by using the GATT Write Characteristic Descriptors sub-procedure on the Client Characteristic Configuration descriptor.
+- If the characteristic value changed:
+	- If connecting and notification is configured, then notify immediately
+	- If not connecting but bonded, but notification is configured, then notify when reconnect.
 
+## ASE Control Point
 
 
 
