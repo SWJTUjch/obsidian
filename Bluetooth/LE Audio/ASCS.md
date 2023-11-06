@@ -28,8 +28,9 @@
 ## Audio Stream Endpoints
 - An ASE characteristic exposes information about an ASE, including the state of the ASE state machine, codec parameters, QoS parameters, and mapping information for any underlying CIS configuration.
 - An ASE characteristic represents the state of an ASE, which can be coupled to a CIS to establish a unicast Audio Stream. For each ASE characteristic (distinguished by their attribute handles), the server shall expose separate ASE characteristic values for each client. A client reading or being notified of an ASE characteristic value cannot gain any information about the ASE characteristic value at the same attribute handle that is exposed for a different client.
-
-
+- The server can expose a maximum of one Sink ASE per client per Sink ASE characteristic and one Source ASE per client per Source ASE characteristic, and the server should expose at a minimum the number of Sink ASE characteristics and/or Source ASE characteristics that it needs to support the number of concurrent established unicast Audio Streams that it can support for a single client.
+![](ASE_CS.png)
+- Same characteristic have same UUID, but have different handle, handle indicate different stream, ASE_ID indicate different client.
 
 
 
