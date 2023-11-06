@@ -20,9 +20,14 @@
 <center>Source ASE</center>
 ![](Sink_ASE.png)
 <center>Sink ASE</center>
+- Configuration, control, and status of an ASE is described in terms of an ASE state machine.
+- The state of an ASE is maintained by the server and is shared with a client using ASE characteristics.
+- The ASE state machine can be controlled by a client by writing to the ASE Control Point characteristic or, in some instances, autonomously controlled by the server. Changes to the state and/or parameter values of an ASE can be tracked by a client by observing changes to the ASE characteristic value.
 
-
-
+# Service characteristics 
+## Audio Stream Endpoints
+- An ASE characteristic exposes information about an ASE, including the state of the ASE state machine, codec parameters, QoS parameters, and mapping information for any underlying CIS configuration.
+- An ASE characteristic represents the state of an ASE, which can be coupled to a CIS to establish a unicast Audio Stream. For each ASE characteristic (distinguished by their attribute handles), the server shall expose separate ASE characteristic values for each client. A client reading or being notified of an ASE characteristic value cannot gain any information about the ASE characteristic value at the same attribute handle that is exposed for a different client.
 
 
 
