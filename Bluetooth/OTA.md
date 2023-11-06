@@ -13,35 +13,48 @@ git checkout -b renesas_main_1_9_selix  origin/renesas_main_1_9_selix
 ```bash
 cd ../../freertos/
 cd ../aws
-git clone https://github.com/renesas/FreeRTOS.git, git submodule update --init
+rm -rf FreeRTOS
 git clone https://github.com/renesas/FreeRTOS.git
+cd FreeRTOS
 git submodule update --init
-cd ../fsp/inc
+cd ../../fsp/inc
 git checkout -b PULSAR-110-pulsar-develop-main origin/PULSAR-110-pulsar-develop-main
 ```
 4. update submodules
 ```bash
-cd re/arm/CMSIS_5
+cd ra/arm
+rm -rf ./CMSIS_5
 git clone git@pbgitap01.rea.renesas.com:peaks/CMSIS_5.git
-```
-cp sit/UC_Application/test_files/shared/tools_cfg.xml test_files/shared
-
-
-
-
-docker run -d -it -v /local/workspace/:/home/fspdev/code 192.168.103.43:5000/renesas/pulsar/20210308 /bin/bash
-
-
-
-CMSIS_5: git clone git@pbgitap01.rea.renesas.com:peaks/CMSIS_5.git
-Unity: git clone https://github.com/ThrowTheSwitch/Unity.git
-erpc: git clone https://github.com/EmbeddedRPC/erpc.git
+cd ra/EmbeddedRPC
+rm -rf ./erpc
+git clone https://github.com/EmbeddedRPC/erpc.git
+cd erpc
 git reset --hard 6a571caf6d5042af5d63ff8745f2e4b24e14bc9f
-rpmsg-lite: git clone https://github.com/NXPmicro/rpmsg-lite.git
+cd /ra/ThrowTheSwitch
+git clone https://github.com/ThrowTheSwitch/Unity.git
+cd ra/NXPmicro
+rm -rf rpmsg-lite
+git clone https://github.com/NXPmicro/rpmsg-lite.git
 git reset --hard 9775c19b960faa311df8bfe10107d7be5ef59db2
+```
+5. download SIT
+```bash
+git clone "ssh://cn1947@gerrit-spsd.verisilicon.com:29418/Renesas/VSI/SIT"
+mv SIT sit
+cp sit/UC_Application/test_files/shared/tools_cfg.xml test_files/shared
+```
+6. run docker
+```bash
+sudo docker run -d -it -v /local/workspace/OTA/peaks:/home/fspdev/code 192.168.103.43:5000/renesas/pulsar/20210308 /bin/bash
+docker container ls
+docker exec -it xxxxxxx /bin/bash
+```
+7. install python modules
+```bash
+pip3 install click cryptography cobr2 intelhex
 
-
-
-MCUboot git clone ssh://gerrit-spsd.verisilicon.com:29418/Renesas/peaks/mcuboot，切换到git checkout -b renesas_main_1_9_selix  origin/renesas_main_1_9_selix
-ra/fsp/inc 切换到git checkout -b PULSAR-110-pulsar-develop-main origin/PULSAR-110-pulsar-develop-main
-FreeRTOS: git clone https://github.com/renesas/FreeRTOS.git, git submodule update --init --recursive
+```
+8. stop docker 
+```bash
+sudo docker stop 12ab71ad9039
+```
