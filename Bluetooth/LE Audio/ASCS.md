@@ -38,7 +38,7 @@
 	- If not connecting but bonded, but notification is configured, then notify when reconnect.
 
 ## ASE Control Point
-
+- The ASE Control Point characteristic is an 8-bit enumerated value (known as the opcode) followed by zero or more parameter octets. The opcode is used by the server to determine which ASE Control operation is being initiated by the client. A notification of the ASE Control Point is used to provide a response to a client-initiated ASE Control operation.
 
 
 
