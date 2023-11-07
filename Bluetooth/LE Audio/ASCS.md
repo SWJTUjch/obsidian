@@ -41,7 +41,14 @@
 - The ASE Control Point characteristic is an 8-bit enumerated value (known as the opcode) followed by zero or more parameter octets. The opcode is used by the server to determine which ASE Control operation is being initiated by the client. A notification of the ASE Control Point is used to provide a response to a client-initiated ASE Control operation.
 
 # ASE Control operations 
-
+## Config Codec operation 
+- Config Codec operation can be initiated by client or server.
+- Finish the Config Codec operation, server shell:
+	- Transition the ASE to the Codec Configured state and write a value of 0x01 (Codec Configured) to the ASE_State field.
+	- Write the Config Codec operation parameter values to the matching Additional_ASE_Parameters fields.
+	- Write the server’s preferred values for the remaining Additional_ASE_Parameters fields.
+## Config QoS operation 
+- The Config QoS operation is used to request a CIS configuration preference with the server and to assign identifiers to the CIS.
 
 
 
