@@ -15,6 +15,7 @@ BLE stack
     input output capacity
     adv interval
     task function
+    ABS layer
 
 R_BLE_Execute
 	wait for a flag
