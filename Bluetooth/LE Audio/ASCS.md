@@ -55,9 +55,13 @@
 - If a CIS has been established and the server is acting as Audio Sink for the ASE, and if the server is ready to receive audio data transmitted by the client, the server may autonomously initiate the Receiver Start Ready, without first sending a notification of the ASE characteristic value in the Enabling state. （如果已经建立了CIS连接，并且server作为sink准备接收数据了，server就会直接进行下一步，而不用发notification）
 
 ## Receiver Start Ready operation
+- client(sink) -> server(source): ==indicate== client is ready to consume audio data transmitted by the server. 
+- client(source) <- server(sink): ==inform== a client acting as Audio Source that the server is ready to consume audio data transmitted by the client.
 
+## Disable operation
 
-
+## Receiver Stop Ready operation 
+- client(Sink), inform a server acting as Audio Source that the client is ready to stop consuming audio data transmitted by the server.
 
 
 
