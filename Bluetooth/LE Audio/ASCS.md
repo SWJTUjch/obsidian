@@ -49,6 +49,12 @@
 	- Write the server’s preferred values for the remaining Additional_ASE_Parameters fields.
 ## Config QoS operation 
 - The Config QoS operation is used to request a CIS configuration preference with the server and to assign identifiers to the CIS.
+- If a client requests a Config QoS operation for an ASE that would result in more than one Sink ASE having identical CIG_ID and CIS_ID parameter values for that client, or that would result in more than one Source ASE having identical CIG_ID and CIS_ID parameter values for that client, the server shall not accept the Config QoS operation for that ASE. （如果一个client进行的配置会使所有的sink/source ASE变为与client相同的QoS配置，就会拒绝QoS的改变）
+
+## Enable operation
+- If a CIS has been established and the server is acting as Audio Sink for the ASE, and if the server is ready to receive audio data transmitted by the client, the server may autonomously initiate the Receiver Start Ready, without first sending a notification of the ASE characteristic value in the Enabling state. （如果已经建立了CIS连接，并且server作为sink准备接收数据了，server就会直接进行下一步，而不用发notification）
+
+## Receiver Start Ready operation
 
 
 
