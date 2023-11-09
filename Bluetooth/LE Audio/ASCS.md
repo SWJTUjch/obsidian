@@ -22,6 +22,9 @@
 - Configuration, control, and status of an ASE is described in terms of an ASE state machine.
 - The state of an ASE is maintained by the server and is shared with a client using ASE characteristics.
 - The ASE state machine can be controlled by a client by writing to the ASE Control Point characteristic or, in some instances, autonomously controlled by the server. Changes to the state and/or parameter values of an ASE can be tracked by a client by observing changes to the ASE characteristic value.
+- ASE server can notify client.
+- CIS can exist except Idle and Codec Configures, but the lost of CIS can't change status expect Streaming and Disabling.
+- Why Disabling?
 
 # Service characteristics 
 ## Audio Stream Endpoints
