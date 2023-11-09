@@ -1,5 +1,4 @@
 # Concepts
-- Audio Channel: A flow of audio data, which might be encoded or not, that can be assigned to a single Audio Location
 - Audio Sink: Receives unicast audio data from Audio Sources
 - Audio Source: Transmits unicast audio data to Audio Sinks
 - Audio Stream Endpoint (ASE): The endpoint of a unicast Audio Stream, which audio data flows to or from; exists on the server.
@@ -63,6 +62,18 @@
 ## Receiver Stop Ready operation 
 - client(Sink), inform a server acting as Audio Source that the client is ready to stop consuming audio data transmitted by the server.
 
+## Released operation 
+- The Released operation shall be initiated autonomously by the server if: 
+	- The server has detected the loss of the LE-ACL for an ASE in any state, or 
+	 - The Release operation for an ASE has been completed and the server controller has indicated that the underlying CIS for the ASE has been torn down.
+
+- When initiating the Released operation, the server shall follow the steps in one of the following lists.
+	- If the server wants to cache a codec configuration:
+		- Transition the ASE to the Codec Configured state and write a value of 0x01 (Codec Configured) to the ASE_State field.
+		• Write to Additional_ASE_Parameters.
+	- If the server does not want to cache a codec configuration: 
+		• Transition the ASE to the Idle state and write a value of 0x00 (Idle) to the ASE_State field. 
+		• Delete any Additional_ASE_Parameters fields present.
 
 
 
