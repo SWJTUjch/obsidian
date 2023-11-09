@@ -45,8 +45,16 @@
 
 ## ASE Control Point
 - The ASE Control Point characteristic is an 8-bit enumerated value (known as the opcode) followed by zero or more parameter octets. The opcode is used by the server to determine which ASE Control operation is being initiated by the client. A notification of the ASE Control Point is used to provide a response to a client-initiated ASE Control operation.
+- ASE Control Point characteristics
+![](ASE_CP_char.png)
 
 # ASE Control operations 
+ASE Control operations can be initiated by server or client.
+- Initiated by client
+	- Success: send a notification of ASE Control Point to client. Can execute all of the operations except Released operation, and send ASE values during that ASE Control operation.
+	- Fail: send a notification to client. 
+- Initiated by server
+	- 
 ## Config Codec operation 
 - Config Codec operation can be initiated by client or server.
 - Finish the Config Codec operation, server shell:
