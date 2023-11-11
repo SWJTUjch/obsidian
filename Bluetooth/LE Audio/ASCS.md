@@ -97,6 +97,11 @@ ASE Control operations can be initiated by server or client.
 		• Delete any Additional_ASE_Parameters fields present.
 
 # test cases
+## ASCS/SR/ASR/BV-01-C \[Service and Characteristic Support Requirements\] 
+- Purpose: Verify supports a single instance of the Audio Stream Control Service and multiple ASEs.
+- Condition: Lower Tester has discovered and cached the ASCS service and characteristic handles
+- Procedure: For each ASE characteristic discovered on the IUT, the Lower Tester executes the GATT Read Characteristic Value sub-procedure.
+- Expected Outcome: the ASE_ID field of each ASE characteristic value is unique and non-zero.
 ## 
 
 
