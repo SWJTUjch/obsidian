@@ -54,8 +54,7 @@ ASE Control operations can be initiated by server or client.
 	- Success: send a notification of ASE Control Point to client. Can execute all of the operations except Released operation, and send ASE values during that ASE Control operation.
 	- Fail: send a notification to client. 
 - Initiated by server
-	- Can execute all of the operations, and send ASE values during that ASE Control operation.
-	- 
+	- Success: Can execute all of the operations, and send ASE values during that ASE Control operation. Not send a notification of the ASE Control Point characteristic value when completing an autonomously-initiated ASE Control operation.
 ## Config Codec operation 
 - Config Codec operation can be initiated by client or server.
 - Finish the Config Codec operation, server shell:
