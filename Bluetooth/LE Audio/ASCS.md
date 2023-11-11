@@ -96,7 +96,15 @@ ASE Control operations can be initiated by server or client.
 		• Transition the ASE to the Idle state and write a value of 0x00 (Idle) to the ASE_State field. 
 		• Delete any Additional_ASE_Parameters fields present.
 
+# test cases
+## setup preambles
+### Transition ASE to the Idle State
+- LT cache ASCS service and characteristics handles
+- LT selects a ASE to read characteristic value
+- LT Enables ASE notification
+- UT set ASE state as Idle
+- LT Enables ASE Control Point notification
 
-
+### Transition ASE to the Codec Configured State  
 
 
