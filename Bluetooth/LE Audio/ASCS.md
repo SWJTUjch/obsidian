@@ -102,7 +102,7 @@ ASE Control operations can be initiated by server or client.
 - LT cache ASCS service and characteristics handles
 - LT selects a ASE to read characteristic value
 - LT Enables ASE notification
-- UT set ASE state as Idle
+- UT reset ASE
 - LT Enables ASE Control Point notification
 
 ### Transition ASE to the Codec Configured State  
