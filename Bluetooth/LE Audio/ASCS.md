@@ -10,7 +10,7 @@
 - ASCS shall be a `Primary Service` and the service UUID shall be set to Audio Stream Control
 - ASCS can be instantiated on devices that can accept the establishment of `unicast Audio Streams`.
 
-# Characteristic
+# Characteristics
 - Sink ASE Characteristic: The server is said to act as Audio Sink for that ASE. There can be more than one Sink ASE characteristic on the server.
 - Source ASE Characteristic: The server is said to act as Audio Source for that ASE. There can be more than one Source ASE characteristic on the server.
 - ASE Control Point Characteristic: An ASE Control Point characteristic that clients use to configure audio codec parameters, CIS configuration parameters, and Metadata for each ASE exposed by the server. The ASE Control Point characteristic is used to operate on all ASEs, distinguishing each ASE by its ASE_ID value
@@ -54,6 +54,7 @@ ASE Control operations can be initiated by server or client.
 	- Success: send a notification of ASE Control Point to client. Can execute all of the operations except Released operation, and send ASE values during that ASE Control operation.
 	- Fail: send a notification to client. 
 - Initiated by server
+	- Can execute all of the operations, and send ASE values during that ASE Control operation.
 	- 
 ## Config Codec operation 
 - Config Codec operation can be initiated by client or server.
