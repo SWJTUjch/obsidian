@@ -79,7 +79,7 @@ ASE Control operations can be initiated by server or client.
 - client(source) <- server(sink): ==inform== a client acting as Audio Source that the server is ready to consume audio data transmitted by the client.
 
 ## Disable operation
-
+- used to request the server to disable an ASE
 ## Receiver Stop Ready operation 
 - client(Sink), inform a server acting as Audio Source that the client is ready to stop consuming audio data transmitted by the server.
 
