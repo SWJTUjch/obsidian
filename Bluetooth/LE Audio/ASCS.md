@@ -61,6 +61,11 @@ ASE Control operations can be initiated by server or client.
 	- Transition the ASE to the Codec Configured state and write a value of 0x01 (Codec Configured) to the ASE_State field.
 	- Write the Config Codec operation parameter values to the matching Additional_ASE_Parameters fields.
 	- Write the server’s preferred values for the remaining Additional_ASE_Parameters fields.
+- Parameters:
+	- Target latency: expect server return meaningful values for QoS preferences: low latency, balance, high reliability.
+	- Target PHY: 1M/2M/Coded
+	- Codec_ID: Coding format, Company ID, VS codec ID
+	- 
 ## Config QoS operation 
 - The Config QoS operation is used to request a CIS configuration preference with the server and to assign identifiers to the CIS.
 - If a client requests a Config QoS operation for an ASE that would result in more than one Sink ASE having identical CIG_ID and CIS_ID parameter values for that client, or that would result in more than one Source ASE having identical CIG_ID and CIS_ID parameter values for that client, the server shall not accept the Config QoS operation for that ASE. （如果一个client进行的配置会使所有的sink/source ASE变为与client相同的QoS配置，就会拒绝QoS的改变）
