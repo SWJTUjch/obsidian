@@ -135,4 +135,23 @@ def http_error(status):
 
 
 # 常用函数
+## hasattr
+- **hasattr()** 函数用于判断对象是否包含对应的属性。
+```python
+class RepVGGBlock():
+    def __init__(self, deploy=False):
+        if deploy:
+            self.rbr_reparam = 1
 
+    def forward(self):
+        if hasattr(self, 'rbr_reparam'):
+            print(1)
+        else:
+            print(0)
+
+block1 = RepVGGBlock()
+block1.forward()         # 0
+
+block2 = RepVGGBlock(deploy=True)
+block2.forward()         # 1
+```
