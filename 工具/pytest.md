@@ -52,7 +52,7 @@ markers                             # 分组执行
 - `--maxfail`：最多报错后停止。上面-x是一个报错就停止，这个是最多能接受多少个用例报错
 - `-k`：根据测试用例的部分字符串指定测试用例
 ```python
-	pytest.main(['-vs', 'testcase/', '-k', '用例名中的字符'])
+	pytest.main(['-vs', 'testcase/', '-k', 'MyClass and not method']) # 包含MyClass但不包含method的方法
 ```
 
 ## pytest的标记
