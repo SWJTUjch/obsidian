@@ -52,9 +52,12 @@ docker exec -it xxxxxxx /bin/bash
 7. install python modules
 ```bash
 pip3 install click cryptography cobr2 intelhex
-
 ```
-8. stop docker 
+8. complie
+```shell
+scons --build=rm_mcuboot_usod_app --board=ra4w3_evb --compiler=gcc --static_analyze=export --skip_srec_check
+```
+9. stop docker 
 ```bash
 sudo docker stop 12ab71ad9039
 ```
