@@ -54,7 +54,10 @@ markers                             # 分组执行
 ```python
 	pytest.main(['-vs', 'testcase/', '-k', 'MyClass and not method']) # 包含MyClass但不包含method的方法
 ```
-
+- 获取运行时间超过1s的最慢的10个case
+```python
+	pytest --durations=10 --durations-min=1.0
+```
 ## pytest的标记
 1. 标记pytest执行测试用例的顺序
 	默认从上到下。如果不想从上到下执行，则可以通过加标记的方式（需要安装pytest-ordering）：
