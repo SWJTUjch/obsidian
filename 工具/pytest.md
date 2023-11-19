@@ -143,11 +143,8 @@ def test_01(self, fun):
 ## 使用pytest_assertrepr_compare定义错误信息
 
 
-
 # Pytest API
 ## raise(expected_exception, match = "")
-
-^13738e
 
 - 用于检查是否产生异常，可以检查一个异常或通过Tuple检查多个异常，如果产生了异常，则检查成功，否则检查失败。
 ```python
