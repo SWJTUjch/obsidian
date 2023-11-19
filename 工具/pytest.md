@@ -133,7 +133,12 @@ def test_01(self, fun):
 	2) 可以在不同的py文件中使用同一个fixture函数
 	3) 原则上conftest.py需要和运行的用例放到同一层，并且不需要做任何import 
 
+
+
+# 在测试中报告错误
 ## assert
+## pytest.raises
+## pytest.warns检查warning
 
 
 
@@ -145,3 +150,8 @@ with pytest.raises(ZeroDivisionError):           # check success
 	1/0
 ```
 - 通过正则表达式匹配产生异常的字符
+- 下面这种形式可以将函数以及函数的参数作为raise的参数，判断这个函数是否会产生期望的异常。
+```python
+pytest.raises(ExpectedException, func, *args, **kwargs)
+```
+- 
