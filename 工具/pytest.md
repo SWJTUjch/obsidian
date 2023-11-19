@@ -136,9 +136,12 @@ def test_01(self, fun):
 ## assert
 
 
-# pytest的输入参数设置
-## 
 
-
-
-
+# Pytest API
+## raise(expected_exception, match = "")
+- 用于检查是否产生异常，可以检查一个异常或通过Tuple检查多个异常，如果产生了异常，则检查成功，否则检查失败。
+```python
+with pytest.raises(ZeroDivisionError):           # check success
+	1/0
+```
+- 通过正则表达式匹配产生异常的字符
