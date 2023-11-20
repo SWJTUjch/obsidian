@@ -142,9 +142,79 @@ def test_01(self, fun):
 ## pytest.warns检查warning
 ## 使用pytest_assertrepr_compare定义错误信息
 
+# Python的fixture
+## Requesting fixture
+- 可以在函数中通过传参的方式使用fixture修饰的函数的返回值，并且可以嵌套
+```python
+def fruit_bowl():
+    return [Fruit("apple"), Fruit("banana")]
+
+def test_fruit_salad(fruit_bowl):
+    # Act
+    fruit_salad = FruitSalad(*fruit_bowl)
+
+    # Assert
+    assert all(fruit.cubed for fruit in fruit_salad.fruit)
+
+# Arrange 在这里，必须使用bowl获得fruit_bowl的结果作为test_的参数
+bowl = fruit_bowl()
+test_fruit_salad(fruit_bowl=bowl)
+```
+但是，在下面的代码中，fruit_bowl使用fixture的修饰，这样后面就可以直接使用该函数的返回值：
+```python
+class Fruit:
+    def __init__(self, name):
+        self.name = name
+        self.cubed = False
+
+    def cube(self):
+        self.cubed = True
+
+class FruitSalad:
+    def __init__(self, *fruit_bowl):
+        self.fruit = fruit_bowl
+        self._cube_fruit()
+
+    def _cube_fruit(self):
+        for fruit in self.fruit:
+            fruit.cube()
+
+# Arrange
+@pytest.fixture
+def fruit_bowl():
+    return [Fruit("apple"), Fruit("banana")]
+
+def test_fruit_salad(fruit_bowl):
+    # Act
+    fruit_salad = FruitSalad(*fruit_bowl)
+
+    # Assert
+    assert all(fruit.cubed for fruit in fruit_salad.fruit)
+```
+- 可以使用多个函数作为参数
+- 在参数中调用一次之后，结果会被缓存，在后面的使用中就会使用缓存的结果。比如在下面的调用中，参数中的append_first函数改变了order，那么在ho
 
 
-
+```python
+@pytest.fixture  
+def first_entry():  
+    return "a"  
+  
+# Arrange  
+@pytest.fixture  
+def order():  
+    return []  
+  
+# Act  
+@pytest.fixture  
+def append_first(order, first_entry):  
+    return order.append(first_entry)  
+  
+  
+def test_string_only(order, append_first, first_entry):  
+    # Assert  
+    assert order == [first_entry]
+```
 
 # Pytest API
 ## raise(expected_exception, match = "")
