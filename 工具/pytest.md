@@ -192,8 +192,7 @@ def test_fruit_salad(fruit_bowl):
     assert all(fruit.cubed for fruit in fruit_salad.fruit)
 ```
 - 可以使用多个函数作为参数
-- 在参数中调用一次之后，结果会被缓存，在后面的使用中就会使用缓存的结果。比如在下面的调用中，参数中的append_first函数改变了order，那么在ho
-
+- 在参数中调用一次之后，结果会被缓存，在后面的使用中就会使用缓存的结果。比如在下面的调用中，参数中的append_first函数改变了order，那么在后面的assert中，order就是被改变过的值。
 
 ```python
 @pytest.fixture  
@@ -215,6 +214,23 @@ def test_string_only(order, append_first, first_entry):
     # Assert  
     assert order == [first_entry]
 ```
+## 自动触发的fixture
+```python
+@pytest.fixture(autouse=True)
+```
+- 每个test被触发之前都会自动触发声明了autouse的函数
+## 使用scope跨类、模块、包、任务地共享fixture
+- 通过添加fixture的scope可以跨模块地创建一个公用的fixture
+```python
+@pytest.fixture(scope="module")
+def smtp_connection():
+	return smtplib.SMTP("smtp.gmail.com", 587, timeout=5)
+```
+- 这里的函数会预先创建一个smtp连接，后面如果多次使用这个函数创建的连接，则可以直接使用，不用再重新创建一个新的连接。
+
+
+
+
 
 # Pytest API
 ## raise(expected_exception, match = "")
