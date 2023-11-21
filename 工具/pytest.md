@@ -220,14 +220,27 @@ def test_string_only(order, append_first, first_entry):
 ```
 - 每个test被触发之前都会自动触发声明了autouse的函数
 ## 使用scope跨类、模块、包、任务地共享fixture
-- 通过添加fixture的scope可以跨模块地创建一个公用的fixture
+- 通过添加fixture的scope可以创建一个公用的fixture，scope后面的参数就是这个instance的作用范围
 ```python
 @pytest.fixture(scope="module")
 def smtp_connection():
 	return smtplib.SMTP("smtp.gmail.com", 587, timeout=5)
 ```
 - 这里的函数会预先创建一个smtp连接，后面如果多次使用这个函数创建的连接，则可以直接使用，不用再重新创建一个新的连接。
+- 声明为module可以跨函数地使用，class可以跨类使用
+- 动态范围：
+```python
+def determine_scope(fixture_name, config):
+    if config.getoption("--keep-containers", None):
+        return "session"
+    return "function"
 
+@pytest.fixture(scope=determine_scope)
+def docker_container():
+    yield spawn_container()
+```
+## 清理测试的fixture
+- 
 
 
 
