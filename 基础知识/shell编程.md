@@ -83,7 +83,7 @@ fi
 ```
 - if和中括号之间有一个空格
 - []中的判断语句前后必须有一个空格
-- [[ ]]中的逻辑操作符可以使用&&或||
+- \[\[ ]]中的逻辑操作符可以使用&&或||
 
 ### case
 - 可以使用通配符
@@ -182,6 +182,24 @@ done
 - 单引号：`var='$(date)'`表示把括号里面的值赋给var
 - 双引号：`var='$(date)'`和不加是一样的，会解析字符串中的命令，赋值给var
 - 冒号：一个空命令，什么时候都是真
+- shift: 参数的左移，可以用于便利每个传入的参数然后执行相应的处理，比如：
+``` bash
+# 下面的语句在每一轮循环中都将传入的参数左移一次，第一次将参数存储进product，后续会将参数存储进saved_modules中，从而实现循环
+product=""
+for arg in "$@"; do
+    arg=$1
+    case $arg in
+        *)
+            if [[ ${product} == "" ]]; then
+                export product=${arg}
+            else
+                saved_modules+=" ${arg}"
+            fi
+            shift
+            ;;
+    esac
+done
+```
 
 ### 输入和输出
 - echo
