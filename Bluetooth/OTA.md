@@ -22,23 +22,26 @@ git checkout -b PULSAR-110-pulsar-develop-main origin/PULSAR-110-pulsar-develop-
 ```
 4. update submodules
 ```bash
-cd ra/arm
+cd ../../../ra/arm
 rm -rf ./CMSIS_5
 git clone git@pbgitap01.rea.renesas.com:peaks/CMSIS_5.git
-cd ra/EmbeddedRPC
+cd ../../ra/EmbeddedRPC
 rm -rf ./erpc
 git clone https://github.com/EmbeddedRPC/erpc.git
 cd erpc
 git reset --hard 6a571caf6d5042af5d63ff8745f2e4b24e14bc9f
-cd /ra/ThrowTheSwitch
+cd ../../../ra/ThrowTheSwitch
+rm -rf ./Unity
 git clone https://github.com/ThrowTheSwitch/Unity.git
-cd ra/NXPmicro
+cd ../../ra/NXPmicro
 rm -rf rpmsg-lite
 git clone https://github.com/NXPmicro/rpmsg-lite.git
+cd rpmsg-lite
 git reset --hard 9775c19b960faa311df8bfe10107d7be5ef59db2
 ```
 5. download SIT
 ```bash
+cd ../../../../peaks
 git clone "ssh://cn1947@gerrit-spsd.verisilicon.com:29418/Renesas/VSI/SIT"
 mv SIT sit
 cp sit/UC_Application/test_files/shared/tools_cfg.xml test_files/shared
@@ -51,7 +54,7 @@ docker exec -it xxxxxxx /bin/bash
 ```
 7. install python modules
 ```bash
-pip3 install click cryptography cobr2 intelhex
+pip3 install click cryptography cbor2 intelhex
 ```
 8. complie
 ```shell

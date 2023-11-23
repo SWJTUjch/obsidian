@@ -8,7 +8,6 @@ New coding style check is based on precommit and using VSI/build to finally call
 ```
 repo init --no-clone-bundle -u ssh://gerrit-spsd.verisilicon.com:29418/manifest --repo-url=ssh://gerrit-spsd.verisilicon.com:29418/git-repo -b spsd/master -g default -m common.xml
 repo sync
-
 ```
 * run build upgrade once, check if run-pre-commit.sh exsits in ~/.local/bin after execute below command
 
