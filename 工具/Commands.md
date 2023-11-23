@@ -59,8 +59,12 @@ find ./ "*.c" | xargs grep "hello world"
 
 
 
+14号机的板子用的时候要是有问题，可以远程给板子断电，方法是：
+1）远程10号机，打开cmd，ssh jenkins_test_auto@10.10.184.10
+2）输入usbrelay，查看继电器状态，7和8是连接B0板子的，其他的不要去动
 
-
+3）比如重启8号就是 先输入usbrelay 6QMBS_8=1 然后usbrelay 6QMBS_8=0，相当于按reset
+忘了说了，6QMBS_8对应Jlink 69406615连接的板子
 
 
 
