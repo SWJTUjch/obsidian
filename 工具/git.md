@@ -8,7 +8,7 @@
 - git rebase \<name> 当前处于git的一个分支上，rebase可以使与该分支并行开发的分支提交后看上去像是线性开发的，即使该分支成为另一个并列分支的后续
 - git diff  \<filename> 可以查看和上一版本的区别
 - `git reset --hard HEAD^ `可以重置到上一个版本，如果还想恢复回来，就需要`git reflog`查看最近一次的ID号，然后通过`git reset --hard <ID>`重置
-
+- 可以通过`git checkout --<filename>`删除暂存区中的操作，也就是丢弃add操作之前的修改
 
 
 # How to push
