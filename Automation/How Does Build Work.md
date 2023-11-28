@@ -3,8 +3,13 @@
 	- 否则如果（）则保存环境变量并将其传给docker
 	- 调用`config/utility_config`
 		- 将 `/etc/os-release` 文件中的内容读取出来，并将其解释为 Shell 命令执行，将标准错误流重定向到`/dev/null`，使用`eval`设置环境变量。[[About Build System#^245d51]]
-		- 
-1. \*=\*形式的入参表示将参数作为环境变量传入，并且将参数作为环境变量导出：
+		- 判断当前处于那种状态（docker/host/cros_sdk）并设置context
+		- 判断当前是否处于Jenkins build/gerrit review， 并设置当前状态码
+		- 根据当前os版本设置不同package版本
+	- 设置全局变量
+	- 如果当前处于chromite/android，则设置不同的root文件系统
+2. 获取输入参数
+	- \*=\*形式的入参表示将参数作为环境变量传入，并且将参数作为环境变量导出：
 ```shell
 if [[ ${saved_assign} != "" ]]; then
     eval "export ${saved_assign}"
@@ -14,7 +19,7 @@ fi
 举个例子，假设 `saved_assign` 的值为 `FOO=bar`。如果直接使用 `export saved_assign`，那么导出的环境变量将是 `saved_assign=FOO=bar`，而不是将 `FOO=bar` 导出为环境变量。这显然不是我们想要的结果。
 通过使用 `eval`，我们可以将 `saved_assign` 的值作为命令进行求值，实际上执行的命令是 `export FOO=bar`，从而将 `FOO=bar` 导出为环境变量。
 
-
+3. 
 
 
 
