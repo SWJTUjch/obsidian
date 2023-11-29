@@ -19,7 +19,12 @@ fi
 举个例子，假设 `saved_assign` 的值为 `FOO=bar`。如果直接使用 `export saved_assign`，那么导出的环境变量将是 `saved_assign=FOO=bar`，而不是将 `FOO=bar` 导出为环境变量。这显然不是我们想要的结果。
 通过使用 `eval`，我们可以将 `saved_assign` 的值作为命令进行求值，实际上执行的命令是 `export FOO=bar`，从而将 `FOO=bar` 导出为环境变量。
 
-3. 
+3. 执行utility中的脚本
+4. 执行product_config配置
+	- 执行product对应的config文件
+	- 设置一些全局变量
+5. 安装utility
+	- 如果禁用安装或不处于host状态或处于快启动模式，则不安装
 
 
 
