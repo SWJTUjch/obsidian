@@ -180,16 +180,61 @@ block2.forward()         # 1
 
 # 常用模块
 ## 参数解析器——argparse
-### 基本使用
-- 创建
+### 创建
 ```python
 parser = argparse.ArgumentParser()
 ```
-- 添加参数
+
+```python
+class argparse.ArgumentParser(prog=None, 
+                                usage=None, 
+                                description=None, 
+                                epilog=None, 
+                                parents=[], 
+                                formatter_class=argparse.HelpFormatter, 
+                                prefix_chars='-', 
+                                fromfile_prefix_chars=None, 
+                                argument_default=None, 
+                                conflict_handler='error', 
+                                add_help=True, 
+                                allow_abbrev=True, 
+                                exit_on_error=True)
+```
+- prog - 程序的名称（默认：sys.argv[0]）
+- usage - 描述程序用途的字符串（默认值：从添加到解析器的参数生成）
+- description - 在参数帮助文档之前显示的文本（默认值：无）
+- epilog - 在参数帮助文档之后显示的文本（默认值：无）
+- parents - 一个 ArgumentParser 对象的列表，它们的参数也应包含在内
+- formatter_class - 用于自定义帮助文档输出格式的类
+- prefix_chars - 可选参数的前缀字符集合（默认值：'-'）
+- fromfile_prefix_chars - 当需要从文件中读取其他参数时，用于标识文件名的前缀字符集合（默认值：None）
+- argument_default - 参数的全局默认值（默认值： None）
+- conflict_handler - 解决冲突选项的策略（通常是不必要的）
+- add_help - 为解析器添加一个 -h/--help 选项（默认值： True）
+- allow_abbrev - 如果缩写是无歧义的，则允许缩写长选项 （默认值：True）
+- exit_on_error - 决定当错误发生时是否让 ArgumentParser 附带错误信息退出。 (默认值: True)
+### 添加参数
 ```python
 parser.add_argument("build_type", type=str, help="Specify the build type")
 ```
-- 解析参数
+
+```python
+ArgumentParser.add_argument(name or flags...,
+                            action='',
+                            nargs='',
+                            const,
+                            default,
+                            type,
+                            choices,
+                            required,
+                            help,
+                            metavar,
+                            dest)
+```
+- name or flags: 参数有两种，一种是位置参数，一种是可选参数，对于位置参数来说，按照声明的顺序设置，这类参数前面没有前缀`-`，而可选参数前面有前缀`-`或`--`， 当`-`和`--`同时出现的时候，系统默认带'--'的为参数名，但是在命令行输入的时候没有这个区分
+- action: 制定了命令行参数应该如何处理
+	- 
+### 解析参数
 ```
 args = parser.parse_args()
 ```
