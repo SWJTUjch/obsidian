@@ -27,7 +27,8 @@ fi
 	- 如果禁用安装或不处于host状态或处于快启动模式，则不安装
 	- 安装python2、python3
 	- 根据不同的系统，调用不同的命令安装软件
-	- 安装软件包仓库https://blog.csdn.net/qq_43406338/article/details/111027654
+	- 检查是否存在安装软件包仓库，后续会使用ppa：https://blog.csdn.net/qq_43406338/article/details/111027654
+	- 
 
 
 
