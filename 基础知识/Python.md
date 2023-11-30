@@ -232,8 +232,15 @@ ArgumentParser.add_argument(name or flags...,
                             dest)
 ```
 - name or flags: 参数有两种，一种是位置参数，一种是可选参数，对于位置参数来说，按照声明的顺序设置，这类参数前面没有前缀`-`，而可选参数前面有前缀`-`或`--`， 当`-`和`--`同时出现的时候，系统默认带'--'的为参数名，但是在命令行输入的时候没有这个区分
-- action: 制定了命令行参数应该如何处理
-	- 
+- action: 指定了命令行参数应该如何处理
+	- store: 仅存储
+	- store_const: 保存关键字const指定的值
+```python
+parser = argparse.ArgumentParser()  
+parser.add_argument('--integers', action='store_const', const=563)  
+args = parser.parse_args('--integers'.split())    # args = Namespace(integers=563)
+```
+
 ### 解析参数
 ```
 args = parser.parse_args()
