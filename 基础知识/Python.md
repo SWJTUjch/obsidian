@@ -162,3 +162,35 @@ block1.forward()         # 0
 block2 = RepVGGBlock(deploy=True)
 block2.forward()         # 1
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 常用模块
+## 参数解析器——argparse
+### 基本使用
+- 创建
+```python
+parser = argparse.ArgumentParser()
+```
+- 添加参数
+```python
+parser.add_argument("build_type", type=str, help="Specify the build type")
+```
+- 解析参数
+```
+args = parser.parse_args()
+```
+
