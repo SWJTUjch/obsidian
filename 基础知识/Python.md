@@ -180,6 +180,7 @@ block2.forward()         # 1
 
 # 常用模块
 ## 参数解析器——argparse
+https://zhuanlan.zhihu.com/p/388930050?utm_id=0
 ### 创建
 ```python
 parser = argparse.ArgumentParser()
@@ -234,13 +235,23 @@ ArgumentParser.add_argument(name or flags...,
 - name or flags: 参数有两种，一种是位置参数，一种是可选参数，对于位置参数来说，按照声明的顺序设置，这类参数前面没有前缀`-`，而可选参数前面有前缀`-`或`--`， 当`-`和`--`同时出现的时候，系统默认带'--'的为参数名，但是在命令行输入的时候没有这个区分
 - action: 指定了命令行参数应该如何处理
 	- store: 仅存储
-	- store_const: 保存关键字const指定的值
-```python
+	- store_const: 保存关键字const指定的值，如果在add_argument中赋值，则会报错
+	```python
 parser = argparse.ArgumentParser()  
 parser.add_argument('--integers', action='store_const', const=563)  
 args = parser.parse_args('--integers'.split())    # args = Namespace(integers=563)
+	```
+	- store_true、store_false: 仅能存储bool值
+	```python
+parser.add_argument('--t', action='store_true')
+parser.add_argument('--f', action='store_false')
+args = parser.parse_args(['--t', '--f'])
+print(args)              #输出：Namespace(f=False, t=True)
 ```
-
+	- append: 将同一个参数的不同值保存在一个list中
+	- count: 统计出现的次数
+	- extend: 存储一个列表，并将参数的每个不同值加入到列表中，可以一次输入多个值
+- nargs: 
 ### 解析参数
 ```
 args = parser.parse_args()
