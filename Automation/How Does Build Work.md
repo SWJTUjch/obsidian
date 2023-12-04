@@ -1,6 +1,6 @@
 1. 首先导入全局配置
 	- 如果当前已经进入了docker，则将`.docker_env`中的参数作为环境变量，删除`.docker_env`并取消该参数的声明；
-	- 否则如果（）则保存环境变量并将其传给docker
+	- 否则如果（）则将当前 Shell 会话中的所有环境变量保存到docker_env中并将其传给docker
 	- 调用`config/utility_config`
 		- 将 `/etc/os-release` 文件中的内容读取出来，并将其解释为 Shell 命令执行，将标准错误流重定向到`/dev/null`，使用`eval`设置环境变量。[[About Build System#^245d51]]
 		- 判断当前处于那种状态（docker/host/cros_sdk）并设置context
