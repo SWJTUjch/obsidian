@@ -22,6 +22,7 @@ fi
 3. 执行utility中的脚本
 4. 执行product_config配置
 	- 执行product对应的config文件
+		- 会export config文件中对应的module_config函数
 	- 设置一些全局变量
 5. 安装utility
 	- 如果禁用安装或不处于host状态或处于快启动模式，则不安装
