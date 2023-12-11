@@ -15,9 +15,9 @@
 - 重启下载了空image的板子
 - 开始测试case
 	- 为每个板子创建一个线程运行该板子的case
-	- 等待每个板子开始运行，如果在规定时间内没有全部运行，就让所有板子停止运行
+	- 等待每个板子开始运行，如果在规定时间内没有全部运行，就让所有板子停止运行。否则就一直等到结束。
+		- 
 	- 停止所有线程
-	- 
 - 所有case结束后生成xml
 
 
@@ -27,3 +27,5 @@
 # Questions
 - why use pathlib to create path but not os
 - why reset empty device twice?
+- why not pytest?
+- 
