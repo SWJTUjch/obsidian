@@ -1,5 +1,6 @@
 # mac build
 - build出现权限问题：需要免密并且开启xcode
+- ssh
 
 
 
