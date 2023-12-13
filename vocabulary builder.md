@@ -275,3 +275,7 @@ dysplasia n.发育不良
 
 
 
+
+
+
+endeavor  努力
