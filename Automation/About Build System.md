@@ -24,8 +24,8 @@ UBUNTU_CODENAME=jammy
 
 
 
-# variate meanings
-|  variate  | meaning  |
+# veriable meanings
+|  veriable  | meaning  |
 |  ----  | ----  |
 |setup_start_time|time of start build|
 |docker_env|host environment need to pass to docker|
