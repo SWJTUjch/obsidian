@@ -19,3 +19,15 @@ UBUNTU_CODENAME=jammy
 
 
 # What is chroot
+
+
+
+
+
+# variate meanings
+|  variate  | meaning  |
+|  ----  | ----  |
+|setup_start_time|time of start build|
+|docker_env|host environment need to pass to docker|
+
+
