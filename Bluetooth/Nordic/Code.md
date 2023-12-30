@@ -26,5 +26,19 @@
 
 		如果没有启用用户空间支持，或者当前不处于系统调用陷阱中，那么会执行一个内存屏障（memory barrier）指令`compiler_barrier()`，以确保内存操作的顺序和可见性。然后调用`z_impl_uart_poll_out()`函数，实现向UART设备发送一个字节的数据。
 4. 创建一个名为`tx_thread_data`的线程，并将其与`tx_thread`函数关联。这个线程用于向控制器发送命令和数据。
+	1. 声明一个指向`struct net_buf`类型的指针变量`buf`，用于存储从发送队列中获取的数据缓冲区。
+	2. 调用`net_buf_get(&tx_queue, K_FOREVER)`函数从发送队列中获取一个数据缓冲区，并将其赋值给`buf`变量。这里的`K_FOREVER`表示如果发送队列为空，线程将一直等待直到有可用的数据缓冲区。
+	3. 调用`bt_send(buf)`函数将获取到的数据缓冲区传递给蓝牙协议栈进行发送。返回值`err`表示发送操作的结果。
+	4. 如果发送操作返回错误（`err`非零），则通过`LOG_ERR()`函数记录错误信息，并调用`net_buf_unref(buf)`函数释放数据缓冲区的引用计数。
+	5. 调用`k_yield()`函数，将CPU的执行权让给其他线程，以便它们有机会运行。这样做是为了避免在发送队列中不断有新数据到来时，当前线程一直占用CPU资源。
     
 5. 进入一个无限循环，不断从`rx_queue`中获取网络缓冲区（`struct net_buf *buf`），然后调用`h4_send(buf)`将缓冲区中的数据发送给控制器。
+	1. 调用`k_fifo_put()`函数将数据缓冲区`buf`放入FIFO队列`fifo`中。`k_fifo_put()`函数是Zephyr操作系统提供的一个API，用于将数据放入FIFO队列中。它会将数据缓冲区添加到队列的尾部，并更新队列的状态。
+
+
+# bt_send
+调用`bt_monitor_send()`函数将数据缓冲区的内容发送给蓝牙监视器。`bt_monitor_send()`函数是Zephyr操作系统提供的一个API，用于将数据发送给蓝牙监视器。蓝牙监视器是一种用于监视蓝牙通信的工具，可以帮助开发人员调试蓝牙应用程序。
+
+接下来，如果启用了TinyCrypt ECC（椭圆曲线加密）功能，将调用`bt_hci_ecc_send()`函数发送数据缓冲区。TinyCrypt ECC是一种轻量级的加密库，用于在蓝牙通信中进行加密和解密操作。`bt_hci_ecc_send()`函数是Zephyr操作系统提供的一个API，用于使用TinyCrypt ECC发送数据缓冲区。
+
+最后，如果没有启用TinyCrypt ECC功能，则调用`bt_dev.drv->send(buf)`函数将数据缓冲区发送给蓝牙设备。`bt_dev.drv`表示蓝牙设备的驱动程序，它是在系统初始化时注册的。`bt_dev.drv->send(buf)`函数是蓝牙设备驱动程序提供的一个API，用于将数据缓冲区发送给蓝牙设备。
