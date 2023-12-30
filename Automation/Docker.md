@@ -25,4 +25,9 @@ docker image rm $(docker image ls -q -f before=mongo:3.2)
 ## RUN执行命令
 - shell格式：`RUN <shell command>`
 - exec格式：'RUN \["可执行文件", "参数1", "参数2"\]'
-- 每一次run会构建一层，所以如果执行了7次run就会构建7层
+- 每一次run会构建一层，所以如果执行了7次run就会构建7层，所以应该将多个命令写成一行
+## 构建镜像
+```shell
+docker build -t nginx:v3 .      #在Dockerfile文件所在目录执行
+```
+这个过程中会启动一个容器，并且运行结束之后再销毁这个容器
