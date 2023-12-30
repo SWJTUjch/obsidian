@@ -13,8 +13,19 @@ unset DBUS_SESSION_BUS_ADDRESS
 startxfce4 &
 gnome-session &
 ```
+- for ubuntu 22.04
+```shell
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+/usr/bin/startxfce4
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+x-window-manager &
+```
 ## Open vncserver
 ```shell
+chmod +x ~/.vnc/xstartup
 vncserver -geometry 1920x1080 -localhost no :1
 vncconfig -nowin&
 git clone "ssh://cn1947@gerrit-spsd.verisilicon.com:29418/Renesas/VSI/SIT"
