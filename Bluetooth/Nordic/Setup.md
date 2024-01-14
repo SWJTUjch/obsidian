@@ -10,3 +10,11 @@ west update
 ```
 The second command may need long time and have some fatal errors because of network problem. You need to repeat this command until output without any fatal error.
 # Linux
+- Download and install nRF Command Line Tools according to your computer platform. URL: https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download?lang=en#infotabs, choose nrf-command-line-tools_10.23.4_amd64.deb
+```
+sudo dpkg -i nrf-command-line-tools_10.23.4_amd64.deb
+```
+- Other steps are same with Windows. 
+# uart
+- use /dev/ttyACM2
+- 

@@ -21,11 +21,23 @@
 - 所有case结束后生成xml
 
 
+- run_case
+	- \_\_start_collect_log
+		- \_\_generate_log_collector
+	- \_\_wait_test_start
+		- \_\_wait_logfile_created
+		- \_\_reset_device  (reset_board)
+		- \_\_extract_key_message
+	- \_\_wait_test_end
+		- \_\_check_key_message
+			- \_\_record_case_failed_reason
+		- \_\_check_test_time_info
+	- \_\_stop_collect_log
+
+
+# controller smoke test
+- do we need log?
+- can we change to dut0 and dut1
 
 
 
-# Questions
-- why use pathlib to create path but not os
-- why reset empty device twice?
-- why not pytest?
-- 

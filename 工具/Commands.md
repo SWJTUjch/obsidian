@@ -62,6 +62,22 @@ vim /etc/ssh/sshd_config
 ```shell
 vncserver -kill :1
 ```
+## **查看**操作**系统版本**信息
+```shell
+cat /proc/version
+lsb_release -a
+```
+## 创建新用户
+ ```shell
+sudo useradd -s /bin/sh -d /home/cn1947 cn1947
+sudo passwd cn1947
+sudo usermod -aG sudo cn1947
+```
+## 查看进程
+```shell 
+ps -ef|grep python
+```
+
 
 
 ssh-keygen -R IP

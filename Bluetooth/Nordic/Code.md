@@ -1,3 +1,4 @@
+## UART_peripheral
 1. 首先，定义了一个静态的FIFO队列（`rx_queue`）用于接收来自控制器的事件和数据。
     
 2. 调用`bt_enable_raw(&rx_queue)`启用原始接口，这将打开HCI驱动程序，允许与控制器进行通信。
