@@ -2,14 +2,18 @@
 	- [ ] 100% test not pass because narrow pulse after a period.
 		- After detected edge, delay several cycle to test it's high or low to verify rising edge or falling edge.
 - [ ] Nordic code
-- [ ] BLE V3 smoke test
+	- [x] connect
+	- [ ] disconnect
+	- [ ] pairing
+	- [ ] notify verify
+	- [ ] 
+- [ ] Group discuss BLE V3 smoke test
 	- [ ] ==Change iamge name to xxx.bin==
 	- [ ] ==Ask total expect running time==
 	- [ ] Can we reset board after generate log (\_\_wait_test_start, L208).
 	- [ ] ==What should we do if blocked?==
 	- [ ] Is it nessary to record test failed in the first time?
 	- [ ] Do we need retry if blocked or result.txt not exist?
-- [ ] smoke test new idea
 ```python
 __run_case(): int, int  
 """
@@ -21,7 +25,7 @@ __record_case_result(): int
 """
 record not run cases result
 
-从一个yaml文件中读取所有的key，并将其存储在一个字典中。然后从一个txt文件中遍历每一行，这个txt文件中每一行都是一条log，不同项之间用空格分隔，我只需要读取第一项并且查看这个项目再字典中是否有匹配项，遍历这个txt之后，把所有的字典中有但是txt中没有的项输出到txt中。
+从一个yaml文件中读取所有的key，并将其存储在一个字典中。然后从一个txt文件中遍历每一行，这个txt文件中每一行都是一条log，不同项之间用空格分隔，只需要读取第一项并且查看这个项目再字典中是否有匹配项，遍历这个txt之后，把所有的字典中有但是txt中没有的项输出到txt中。
 """ 
 __stop_all_threads  
 """
@@ -30,8 +34,6 @@ kill python process
 __init_devices
 """
 generate image url and initiate devices
-
-
 """
 ```
 
