@@ -1,19 +1,22 @@
 - [ ] PWM duty cycle code refine
 	- [ ] 100% test not pass because narrow pulse after a period.
-		- After detected edge, delay several cycle to test it's high or low to verify rising edge or falling edge.
+		- After detected edge, delay several cycle to test it's high or low to verify rising edge or falling edge. (code done, wait for verify)
 - [ ] Nordic code
 	- [x] connect
-	- [ ] disconnect
-	- [ ] pairing
+	- [ ] use UART interact with Nordic user
+	- [ ] pairing 10 modes
 	- [ ] notify verify
-	- [ ] 
-- [ ] Group discuss BLE V3 smoke test
-	- [ ] ==Change iamge name to xxx.bin==
-	- [ ] ==Ask total expect running time==
-	- [ ] Can we reset board after generate log (\_\_wait_test_start, L208).
-	- [ ] ==What should we do if blocked?==
-	- [ ] Is it nessary to record test failed in the first time?
-	- [ ] Do we need retry if blocked or result.txt not exist?
+	- [ ] disconnect
+	- [ ] use uart interact with pulsar user
+	- [ ] pulsar interact with Nordic
+- [ ] BLE V3 smoke test
+	- [x] Group review test plan
+	- [ ] refine flow chart
+	- [ ] BLEV3CaseHandler class
+	- [ ] device Class
+	- [ ] CaseHandler class
+	- [ ] New questions 
+		- Do we store log in BB-tools or in bttest directory?
 ```python
 __run_case(): int, int  
 """
@@ -35,47 +38,4 @@ __init_devices
 """
 generate image url and initiate devices
 """
-```
-
-
-```python
-import yaml
-
-def read_yaml(file_path):
-    with open(file_path, 'r') as file:
-        data = yaml.safe_load(file)
-    return data
-
-def get_yaml_keys(file_path):
-    data = read_yaml(file_path)
-    keys = set(data.keys())
-    return keys
-
-def read_txt(file_path):
-    with open(file_path, 'r') as file:
-        lines = file.readlines()
-    return lines
-
-def find_missing_items(yaml_keys, txt_lines):
-    missing_items = yaml_keys.difference(txt_lines)
-    return missing_items
-
-def write_txt(file_path, missing_items):
-    with open(file_path, 'w') as file:
-        for item in missing_items:
-            file.write(item + '\n')
-
-def process_files(yaml_file, txt_file, output_file):
-    yaml_keys = get_yaml_keys(yaml_file)
-    txt_lines = set(read_txt(txt_file))
-    missing_items = find_missing_items(yaml_keys, txt_lines)
-    write_txt(output_file, missing_items)
-
-# 示例用法
-yaml_file = 'path/to/your/yaml/file.yaml'
-txt_file = 'path/to/your/txt/file.txt'
-output_file = 'path/to/your/output/file.txt'
-
-process_files(yaml_file, txt_file, output_file)
-
 ```

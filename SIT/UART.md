@@ -1,6 +1,9 @@
 # 通信协议
 - Idle时保持为1，传输数据时1bit的0为起始位，可配置5~8位的数据位（LSB--MSB），1bit校验位，1~2bit停止位
-- 高波特率误差（==原因==）
+- 波特率的计算
+![](uart_baudrate.png)
+- 高波特率会产生一定的误差
+	- 
 
 # CMSIS_5 driver
 - CMSIS（Cortex Micro-controller Software Interface Standard) 是ARM定义的软件界面标准
