@@ -3,7 +3,8 @@
 - 波特率的计算
 ![](uart_baudrate.png)
 - 高波特率会产生一定的误差
-	- 
+	- 上式无法整除带来的误差
+	- 时钟相位偏移误差
 
 # CMSIS_5 driver
 - CMSIS（Cortex Micro-controller Software Interface Standard) 是ARM定义的软件界面标准
