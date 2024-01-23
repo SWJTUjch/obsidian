@@ -35,9 +35,7 @@
 	- \_\_stop_collect_log
 
 
-# controller smoke test
-- do we need log?
-- can we change to dut0 and dut1
+scenario_api_test /home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/scenario_api_test/scenario_case_config.yaml /home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/devices.yaml /home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/scenario_api_test/execution_api_config.yaml http://jenkins-spsd.verisilicon.com/image/gerrit_review_verification/28581/pulsar_ble/images/ 10.10.184.15 8002 -C case_4 case_5x0 case_11
 
 
 

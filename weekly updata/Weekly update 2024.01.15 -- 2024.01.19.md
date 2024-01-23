@@ -3,12 +3,23 @@
 		- After detected edge, delay several cycle to test it's high or low to verify rising edge or falling edge. (code done, wait for verify)
 - [ ] Nordic code
 	- [x] connect
-	- [ ] use UART interact with Nordic user
+	- [x] use UART interact with Nordic user
 	- [ ] pairing 10 modes
 	- [ ] notify verify
 	- [ ] disconnect
 	- [ ] use uart interact with pulsar user
 	- [ ] pulsar interact with Nordic
+- [x] Pulsar support set pairing IO capacity.
+	- [x] Set capacity
+	- [x] support different input command and different flow.
+		- [x] wait for connect
+			- BLE_GAP_IOCAP_DISPLAY_ONLY
+			- BLE_GAP_IOCAP_NOINPUT_NOOUTPUT
+		- [x] input yes/no
+		- BLE_GAP_IOCAP_DISPLAY_YESNO
+		- [x] input passkey
+		- BLE_GAP_IOCAP_KEYBOARD_DISPLAY
+		- BLE_GAP_IOCAP_KEYBOARD_ONLY
 - [ ] BLE V3 smoke test
 	- [x] Group review test plan
 	- [ ] refine flow chart
