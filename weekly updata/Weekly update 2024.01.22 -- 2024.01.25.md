@@ -42,4 +42,5 @@ generate image url and initiate devices
 		- "rigel_a0_board" is a resource name?
 		- Why the result of "resource_name"
 		- How to trigger the job?
-		- How to pa
+		- How to pass the parameters?
+		- 
