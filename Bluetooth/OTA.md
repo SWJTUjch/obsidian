@@ -56,7 +56,7 @@ docker exec -it xxxxxxx /bin/bash
 ```bash
 pip3 install click cryptography cbor2 intelhex
 ```
-8. complie
+8. compile
 ```shell
 scons --build=rm_mcuboot_usod_app --board=ra4w3_evb --compiler=gcc --static_analyze=export --skip_srec_check
 ```
