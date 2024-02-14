@@ -660,13 +660,7 @@ grep -E "^([^:]+\>).*\1$" /etc/pwd
 
 
 # 常用工具使用
-## makefile
-### makefile基本规则
 
-
-
-
-## cmake
 
 
 

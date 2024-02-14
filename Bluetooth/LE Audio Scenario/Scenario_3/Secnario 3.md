@@ -1,0 +1,1 @@
+set stream_ops  contain stream operated callback, this process have done in bt_bap_stream_cb_register

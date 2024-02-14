@@ -35,7 +35,26 @@
 	- \_\_stop_collect_log
 
 
-scenario_api_test /home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/scenario_api_test/scenario_case_config.yaml /home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/devices.yaml /home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/scenario_api_test/execution_api_config.yaml http://jenkins-spsd.verisilicon.com/image/gerrit_review_verification/28581/pulsar_ble/images/ 10.10.184.15 8002 -C case_4 case_5x0 case_11
+scenario_api_client
+
+scenario_api_test
+/home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/scenario_api_test/scenario_case_config.yaml
+/home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/devices.yaml
+/home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/scenario_api_test/execution_api_config.yaml
+http://jenkins-spsd.verisilicon.com/image/gerrit_review_verification/33086/pulsar_ble/images/
+10.10.184.15
+8002
+-C
+case_5x3
 
 
 
+pulsar_ble_smoke_test
+/home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/pulsar_ble_smoke_test/pulsar_ble_smoke_case_config.yaml
+/home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/devices.yaml
+/home/cn1947/workspace/chunhao_test/Automation/platforms/bttest/tests/scenario_api/config/pulsar_ble_smoke_test/execution_pulsar_ble_smoke_config.yaml
+http://jenkins-spsd.verisilicon.com/image/gerrit_review_verification/32983/pulsar_ble/images/
+10.10.184.15
+8002
+-C
+case0

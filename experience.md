@@ -1,10 +1,18 @@
 # mac build
 - build出现权限问题：需要免密并且开启xcode
-- ssh
+
+
+# linux ssh windows
+- 把linux的id_rsa.pub复制到windows的authorized_key，不能出现任何其他字符
+- 如果要ssh之后直接使用powershell，要在windows执行
+```powershell
+New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
+```
 
 
 
-# e2 build and run
+
+
 
 
 

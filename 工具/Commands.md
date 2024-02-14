@@ -76,6 +76,8 @@ sudo usermod -aG sudo cn1947
 ## 查看进程
 ```shell 
 ps -ef|grep python
+ps -ef | grep ttyUSB | grep -v root | awk '{print $2}' | xargs kill -9
+
 ```
 
 
