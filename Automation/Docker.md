@@ -72,5 +72,5 @@ COPY utility/apt_install.txt /build/utility/
 - 如果 <源路径> 为一个 tar 压缩文件的话，压缩格式为 gzip , bzip2 以及 xz 的情况下， ADD 指令将会自动解压缩这个压缩文件到 <目标路径> 去。
 - 源路径可以可以是一个URL，下载后权限为600，如果需要更改权限，需要使用RUN
 ## CMD容器启动命令
-
+- CMD 指令就是用于指定默认的容器主进程的启动命令的。
 
