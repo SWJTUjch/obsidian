@@ -1,0 +1,14 @@
+- [ ] BLE V3 smoke test
+	- [ ] BLEV3CaseHandler class
+	- [ ] Device Class
+	- [ ] Monitor class
+	- [ ] CaseHandler class
+		- [ ] only ScenarioCaseRunner use Monitor class, do we use set_monitor_args to set or set in init?
+	- [ ] Group discuss
+		- Do we store log in BB-tools or in bttest directory?
+		- Add empty image in net-disk?
+		- Use PDU reset?
+- [ ] LE Audio Scenario 9
+	- [ ] CMake
+	- [ ] flow chart
+	- [ ] code

@@ -13,9 +13,9 @@
 	- [ ] CMake
 	- [ ] flow chart
 	- [ ] code
-- [ ] Mac reset and auto start
-	- [ ] Reset
-	- [ ] start Xcode and Amphetamine
+- [x] Mac reset and auto start
+	- [x] Reset
+	- [x] start Xcode and Amphetamine
 ```shell
 55 15 * * 0 /sbin/shutdown -r now 
 @reboot open -a Xcode 
